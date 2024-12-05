@@ -1,0 +1,63 @@
+.select {
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-bottom: 1px solid $dark;
+        border-right: 1px solid $dark;
+        transform: rotate(45deg);
+
+        @include to($sm) { /////!!!!!
+            top: 10px;
+            right: 15px;
+            width: 7px;
+            height: 7px;
+        }
+        
+        @include between($sm, $xl) {
+            top: calc(10px * 0.75);
+            right: calc(15px * 0.75);
+            width: calc(7px * 0.75);
+            height: calc(7px * 0.75);
+        }
+        
+        @include from($xl) {
+            top: 10px;
+            right: 15px;
+            width: 7px;
+            height: 7px;
+        }
+    }
+
+    &__select {
+        display: block;
+        width: 100%;
+        border: 1px solid $dark;
+        outline: none;
+        appearance: none;
+        border-radius: 0;
+        background-color: $white;
+        font-family: $base_font;
+        box-sizing: border-box;
+
+        @include to($sm) { /////!!!!!
+            height: 34px;
+            line-height: 32px;
+            padding: 0 40px 0 20px;
+        }
+        
+        @include between($sm, $xl) {
+            height: calc(34px * 0.75);
+            line-height: calc(32px * 0.75);
+            padding: 0 calc(40px * 0.75) 0 calc(20px * 0.75);
+        }
+        
+        @include from($xl) {
+            height: 34px;
+            line-height: 32px;
+            padding: 0 40px 0 20px;
+        }
+    }
+}

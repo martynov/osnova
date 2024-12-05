@@ -1,0 +1,32 @@
+.inline-checkbox {
+
+    &__input {
+        display: none;
+    }
+
+    &__title {
+        border-bottom: 1px solid transparent;
+
+        @include to($sm) { /////!!!!!
+            font-size: 16px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(16px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 16px;
+        }
+    }
+
+    &__input:checked ~ &__title {
+        font-weight: bold;
+        border-bottom-color: $dark;
+    }
+
+    &__input[disabled] ~ &__title {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+}

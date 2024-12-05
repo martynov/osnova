@@ -1,0 +1,76 @@
+.subscribe-form {
+
+    &__title {
+        @include to($sm) {
+            font-size: 18px;
+            margin-bottom: 36px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(16px * 0.75);
+            margin-bottom: calc(12px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__form {
+
+    }
+
+    &__fieldset {
+        display: flex;
+        border-width: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        outline: none;
+        border: 1px solid $beige;
+        border-radius: 0;
+        appearance: none;
+        font-family: $base_font;
+        box-sizing: border-box;
+
+        @include to($sm) { /////!!!!!
+            height: 50px;
+            line-height: 50px;
+            padding: 0 22px;
+            font-size: 14px;
+        }
+        
+        @include between($sm, $xl) {
+            height: calc(36px * 0.75);
+            line-height: calc(36px * 0.75);
+            padding: 0 calc(22px * 0.75);
+            font-size: calc(14px * 0.75);
+        }
+        
+        @include from($xl) {
+            height: 36px;
+            line-height: 36px;
+            padding: 0 22px;
+            font-size: 14px;
+        }
+    }
+
+    &__submit {
+        @include to($sm) { /////!!!!!
+            margin-left: 26px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-left: calc(26px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-left: 26px;
+        }
+    }
+}

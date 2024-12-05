@@ -1,0 +1,66 @@
+.brick-checkbox, .bricks-checkbox {
+
+    &__input {
+        display: none;
+    }
+
+    &__label {
+        white-space: nowrap;
+        background-color: $beige;
+        transition: all 0.2s ease;
+
+        @include to($sm) { /////!!!!!
+            height: 21px;
+            line-height: 21px;
+            padding: 0 10px;
+        }
+        
+        @include between($sm, $xl) {
+            height: calc(21px * 0.75);
+            line-height: calc(21px * 0.75);
+            padding: 0 calc(10px * 0.75);
+        }
+        
+        @include from($xl) {
+            height: 21px;
+            line-height: 21px;
+            padding: 0 10px;
+        }
+    }
+
+    &__color-preview {
+        display: inline-block;
+        vertical-align: baseline;
+        width: 9px;
+        height: 9px;
+        margin-right: 5px;
+        border-radius: 50%;
+    }
+    
+    &__title {
+        display: inline-block;
+        color: inherit;
+
+        @include to($sm) {
+            font-size: 14px; /////!!!!!
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(14px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 14px;
+        }
+    }
+
+    &__input:checked ~ &__label {
+        color: white;
+        background-color: $dark;
+    }
+
+    &__input[disabled] ~ &__label {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+}

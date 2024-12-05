@@ -1,0 +1,55 @@
+.blog-feed {
+    
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include to($sm) {
+            margin: 42px -20px 0;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(47px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 47px;
+        }
+    }
+
+    &__item {
+        @include to($sm) {
+            width: 100%;
+
+            & + & {
+                margin-top: 40px;
+            }
+        }
+        
+        @include between($sm, $xl) {
+            width: calc(50% - (calc(18px * 0.75) / 2));
+            margin-bottom: calc(60px * 0.75);
+        }
+        
+        @include from($xl) {
+            width: calc(50% - (18px / 2));
+            margin-bottom: 60px;
+        }
+
+        @include from($sm) {
+            &:nth-child(even) {
+                @include to($sm) { /////!!!!!
+                    margin-left: 18px;
+                }
+                
+                @include between($sm, $xl) {
+                    margin-left: calc(18px * 0.75);
+                }
+                
+                @include from($xl) {
+                    margin-left: 18px;
+                }
+            }
+        }
+    }
+}

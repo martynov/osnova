@@ -1,0 +1,99 @@
+.hamburger-button {
+    display: block;
+    position: relative;
+    border: none;
+    outline: none;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include to($sm) { /////!!!!!
+        width: 42px;
+        height: 42px;
+    }
+    
+    @include between($sm, $xl) {
+        width: calc(32px * 0.75);
+        height: calc(32px * 0.75);
+    }
+    
+    @include from($xl) {
+        width: 32px;
+        height: 32px;
+    }
+    
+    & > span {
+        display: block;
+        border-radius: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: $dark;
+        transition: all 0.2s ease;
+        
+        @include to($sm) { /////!!!!!
+            width: 23px;
+            height: 4px;
+
+            &:nth-child(1) {
+                transform: translate3d(-50%, calc(-50% - 8px), 0);
+            }
+            
+            &:nth-child(2) {
+                transform: translate3d(-50%, -50%, 0);
+            }
+            
+            &:nth-child(3) {
+                transform: translate3d(-50%, calc(-50% + 8px), 0);
+            }
+        }
+        
+        @include between($sm, $xl) {
+            width: 10px;
+            height: 2px;
+    
+            &:nth-child(1) {
+                transform: translate3d(-50%, calc(-50% - 4px), 0);
+            }
+            
+            &:nth-child(2) {
+                transform: translate3d(-50%, -50%, 0);
+            }
+            
+            &:nth-child(3) {
+                transform: translate3d(-50%, calc(-50% + 4px), 0);
+            }
+        }
+        
+        @include from($xl) {
+            width: 14px;
+            height: 3px;
+
+            &:nth-child(1) {
+                transform: translate3d(-50%, calc(-50% - 6px), 0);
+            }
+
+            &:nth-child(2) {
+                transform: translate3d(-50%, -50%, 0);
+            }
+            
+            &:nth-child(3) {
+                transform: translate3d(-50%, calc(-50% + 6px), 0);
+            }
+        }
+    }
+
+    &_cross > span {
+        &:nth-child(1) {
+            transform: translate3d(-50%, -50%, 0) rotate(45deg) scaleX(140%);
+        }
+        
+        &:nth-child(2) {
+            transform: translate3d(-50%, -50%, 0) scale(0);
+        }
+        
+        &:nth-child(3) {
+            transform: translate3d(-50%, -50%, 0) rotate(-45deg) scaleX(140%);
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.home-page {
+
+    &__main-banner {
+        @include to($sm) {
+            margin-bottom: 8px;
+        }
+
+        @include between($sm, $xl) {
+            margin-bottom: calc(18px * 0.75);
+        }
+
+        @include from($xl) {
+            margin-bottom: 18px;
+        }
+    }
+
+    &__categories-tiles {
+        @include to($sm) {
+            margin: 0 -20px;
+        }
+    }
+
+    &__brands-list {
+        @include to($sm) {
+            margin: 35px -20px;
+        }
+
+        @include between($sm, $xl) {
+            margin: calc(35px * 0.75) 0;
+        }
+
+        @include from($xl) {
+            margin: 35px 0;
+        }
+    }
+
+    &__products-widget {
+        @include to($sm) { /////!!!!!
+            margin: 100px 0;
+        }
+
+        @include between($sm, $xl) {
+            margin: calc(100px * 0.75) 0;
+        }
+
+        @include from($xl) {
+            margin: 100px 0;
+        }
+    }
+    
+    &__lookbook {
+        @include to($sm) { /////!!!!!
+            margin: 100px 0;
+        }
+
+        @include between($sm, $xl) {
+            margin: calc(100px * 0.75) 0;
+        }
+
+        @include from($xl) {
+            margin: 100px 0;
+        }
+    }
+
+    &__blog-widget {
+        @include to($sm) { /////!!!!!
+            margin: 100px 0;
+        }
+
+        @include between($sm, $xl) {
+            margin: calc(100px * 0.75) 0;
+        }
+
+        @include from($xl) {
+            margin: 100px 0;
+        }
+    }
+}

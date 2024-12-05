@@ -1,0 +1,45 @@
+<header class="header">
+    <div class="header__wrapper wrapper">
+        <div class="header__row">
+            <div class="header__column header__column_hamburger">
+                <button class="header__button header__button_hamburger header__button_hamburger-desktop hamburger-button" data-header-dropdown="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="header__button header__button_hamburger header__button_hamburger-mobile hamburger-button" data-header-dropdown="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="header__column header__column_main-menu">
+                <!--=include main-menu.html -->
+            </div>
+            <div class="header__column header__column_logo">
+                <a href="index.html" class="logo" title="На главную">Osnova</a>
+            </div>
+            <div class="header__column header__column_aside-menu">
+                <!--=include aside-menu.html -->
+            </div>
+            <div class="header__column header__column_search">
+                <!--=include search.html -->
+            </div>
+            <div class="header__column header__column_aside-buttons">
+                <div class="header__aside-buttons">
+                    <a href="basket.html" class="header__button icon-button icon-button_shopping-cart">
+                        <div class="icon-button__counter">3</div>
+                    </a>
+                    <div class="header__button icon-button icon-button_bookmark"></div>
+                    <a href="/profile.html" class="header__button icon-button icon-button_profile"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__dropdown" data-dropdown-name="menu">
+        <!--=include dropdown.html -->
+    </div>
+    <div class="header__dropdown" data-dropdown-name="mobile-menu">
+        <!--=include mobile-dropdown.html -->
+    </div>
+</header>

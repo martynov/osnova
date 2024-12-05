@@ -1,0 +1,60 @@
+<!-- 
+
+Этот компонент используется для отображения в заказах
+на четырех страницах: на двух этапах корзины; в личном кабинете
+в детальном просмотре заказа; и в личном кабинете при
+разворачивании каждого отдельного заказа из общего списка
+заказов (только на мобилах).
+
+Везде используется одинаковая вёрстка, но скрываются лишние
+колонки. Так, например, на странице подробностей заказа в
+личном кабинете не выводится колонка с чекбоксом и кнопки
+закладок, а спинбокс для выбора количества выводится только
+на первом этапе корзины.
+
+-->
+
+<div class="product-preview-row">
+    <div class="product-preview-row__row">
+        <div class="product-preview-row__column product-preview-row__column_checkbox">
+            <label class="product-preview-row__checkbox">
+                <input type="checkbox" />
+                <div></div>
+            </label>
+        </div>
+        <div class="product-preview-row__column product-preview-row__column_image">
+            <div class="product-preview-row__image"></div>
+        </div>
+        <div class="product-preview-row__column product-preview-row__column_description">
+            <div class="product-preview-row__description">
+                <div class="product-preview-row__brand">New Balance</div>
+                <div class="product-preview-row__title">Шорты женские</div>
+                <div class="product-preview-row__id">арт. 6852456896</div>
+                <div class="product-preview-row__sku-line">
+                    <div class="product-preview-row__sku-name">Размер</div>
+                    <div class="product-preview-row__sku-value">38 (EU)</div>
+                </div>
+                <div class="product-preview-row__sku-line">
+                    <div class="product-preview-row__sku-name">Цвет</div>
+                    <div class="product-preview-row__sku-value">Розовый</div>
+                </div>
+            </div>
+        </div>
+        <div class="product-preview-row__column product-preview-row__column_aside-controls">
+            <div class="product-preview-row__aside-controls">
+                <div class="product-preview-row__column product-preview-row__column_price">
+                    <div class="product-preview-row__price price price_rub">5 555</div>
+                </div>
+                <div class="product-preview-row__column product-preview-row__column_count">
+                    <!--=include ../spinbox.html -->
+                </div>
+                <div class="product-preview-row__column product-preview-row__column_buttons">
+                    <div class="product-preview-row__buttons">
+                        <div class="product-preview-row__button icon-button icon-button_trash icon-button_beige"></div>
+                        <div class="product-preview-row__button icon-button icon-button_bookmark icon-button_beige"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

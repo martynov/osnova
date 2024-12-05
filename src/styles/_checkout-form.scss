@@ -1,0 +1,65 @@
+.checkout-form {
+
+    &__section {
+        & + & {
+            @include to($sm) {
+                margin-top: 60px;
+            }
+            
+            @include between($sm, $xl) {
+                margin-top: calc(75px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-top: 75px;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-weight: bold;
+        text-transform: uppercase;
+
+        @include to($sm) {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        
+        @include from($xl) {
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__row {
+        @include from($sm) {
+            display: flex;
+        }
+    }
+
+    &__column {
+        
+        @include from($sm) {
+            width: calc((100% / 3) - (10px * 2 / 3));
+        }
+
+        & + & {
+            @include to($sm) {
+                margin-top: 22px;
+            }
+
+            @include between($sm, $xl) {
+                margin-left: calc(10px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-left: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,313 @@
+.dashboard-page {
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 600;
+
+        @include to($sm) { /////!!!!!
+            font-size: 16px;
+            margin-top: 28px;
+            margin-bottom: 40px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(19px * 0.75);
+            margin-bottom: calc(16px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 19px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__menu {
+        &_mobile {
+            @include to($sm) {
+                border-bottom: 1px solid $beige;
+                margin: 0 -20px;
+            }
+
+            @include from($sm) {
+                display: none;
+            }
+        }
+    
+        &_desktop {
+            @include to($sm) {
+                display: none;
+            }
+        }
+    }
+
+    &__aside-subtitle {
+        font-weight: bold;
+        text-transform: uppercase;
+        
+        @include to($sm) {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(24px * 0.75);
+            margin-bottom: calc(28px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 24px;
+            margin-bottom: 28px;
+        }
+    }
+
+    &__back-button {
+        margin-bottom: 32px;
+    }
+
+    &__row {
+        @include from($sm) {
+            display: flex;
+        }
+    }
+
+    &__column {
+
+        &_main {
+            @include from($sm) {
+                width: 75%;
+            }
+        }
+        
+        &_aside {
+            @include between($sm, $xl) {
+                margin-right: calc(55px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-right: 55px;
+            }
+        }
+    }
+
+    &__main {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    &__products-set {
+        @include to($sm) { /////!!!!!
+            margin: 50px 0;
+        }
+        
+        @include between($sm, $xl) {
+            margin: calc(50px * 0.75) 0;
+        }
+        
+        @include from($xl) {
+            margin: 50px 0;
+        }
+    }
+
+    &__products-set-heading {
+        @include to($sm) { /////!!!!!
+            margin-bottom: 47px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-bottom: calc(47px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-bottom: 47px;
+        }
+    }
+
+    &__products-list {
+
+    }
+
+    &__buttons-line {
+        display: flex;
+        justify-content: flex-end;
+
+        @include to($sm) { /////!!!!!
+            margin: 50px 0 -40px;
+        }
+
+        @include between($sm, $xl) {
+            margin: calc(50px * 0.75) 0 calc(-40px * 0.75);
+        }
+
+        @include from($xl) {
+            margin: 50px 0 -40px;
+        }
+    }
+
+    &__button {
+        display: block;
+        position: relative;
+        border: none;
+        outline: none;
+        appearance: none;
+        cursor: pointer;
+        background-color: transparent;
+        font-family: $base_font;
+
+        @include to($sm) { /////!!!!!
+            font-size: 14px;
+            height: 34px;
+            line-height: 34px;
+            padding: 0 0 0 46px;
+
+            &::before {
+                width: 34px;
+                height: 34px;
+            }
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(14px * 0.75);
+            height: calc(34px * 0.75);
+            line-height: calc(34px * 0.75);
+            padding: 0 0 0 calc(46px * 0.75);
+
+            &::before {
+                width: calc(34px * 0.75);
+                height: calc(34px * 0.75);
+            }
+        }
+        
+        @include from($xl) {
+            font-size: 14px;
+            height: 34px;
+            line-height: 34px;
+            padding: 0 0 0 46px;
+
+            &::before {
+                width: 34px;
+                height: 34px;
+            }
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &_create {
+            &::before {
+                background-image: url('../images/icon-create.svg');
+                background-size: 60%;
+            }
+        }
+    }
+
+    &__hello {
+        color: #646464;
+        font-size: 18px;
+        font-weight: 500;
+
+        @include to($sm) { /////!!!!!
+            margin-bottom: 50px;
+        }
+
+        @include between($sm, $xl) {
+            margin-bottom: calc(50px * 0.75);
+        }
+
+        @include from($xl) {
+            margin-bottom: 50px;
+        }
+
+        > span {
+            color: #313131;
+        }
+    }
+
+    &__line-info {
+        font-size: 16px;
+        display: flex;
+        align-content: baseline;
+        color: #383836;
+
+        & + & {
+            @include to($sm) { /////!!!!!
+                margin-top: 24px;
+            }
+    
+            @include between($sm, $xl) {
+                margin-top: calc(24px * 0.75);
+            }
+    
+            @include from($xl) {
+                margin-top: 24px;
+            }
+        }
+    }
+
+    &__line-info-subtitle {
+        
+    }
+
+    &__line-info-value {
+        font-weight: bold;
+        margin-left: 12px;
+    }
+
+    &__line-info-help {
+        color: #5c5c5c;
+        font-size: 12px;
+        margin-left: 12px;
+        align-self: flex-end;
+    }
+
+    &__loyal-progress {
+
+        @include to($sm) { /////!!!!!
+            margin-top: 90px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(90px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 90px;
+        }
+    }
+
+    &__form {
+
+        @include to($sm) { /////!!!!!
+            margin-top: 76px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(76px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 76px;
+        }
+    }
+
+    &__orders-list {
+
+        @include to($sm) { /////!!!!!
+            margin-top: 24px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(24px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 24px;
+        }
+    }
+}

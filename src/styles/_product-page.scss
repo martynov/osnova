@@ -1,0 +1,79 @@
+.product-page {
+    
+    &__row {
+        @include to($sm) {
+            position: relative;
+        }
+
+        @include from($sm) {
+            display: flex;
+        }
+        
+        @include between($sm, $xl) {
+            margin-bottom: calc(100px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-bottom: 100px;
+        }
+    }
+
+    &__column {
+        @include from($sm) {
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+
+        &_gallery {
+            @include to($sm) {
+                margin: 0 -20px 20px;
+            }
+
+            @include from($sm) {
+                width: 75%;
+            }
+        }
+    
+        &_description {
+            @include to($sm) {
+                
+            }
+            
+            @include from($sm) {
+                width: 25%;
+            }
+            
+            @include between($sm, $xl) {
+                padding-left: calc(18px * 0.75);
+            }
+            
+            @include from($xl) {
+                padding-left: 18px;
+            }
+        }
+    }
+
+    &__gallery {
+        
+    }
+
+    &__description {
+
+    }
+
+    &__similar-row {
+        & + & {
+            @include to($sm) { /////!!!!!
+                margin-top: 140px;
+            }
+            
+            @include between($sm, $xl) {
+                margin-top: calc(140px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-top: 140px;
+            }
+        }
+    }
+}

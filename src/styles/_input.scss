@@ -1,0 +1,51 @@
+.input {
+    display: block;
+    width: 100%;
+    font-weight: normal;
+    font-family: $base_font;
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid $beige;
+    appearance: none;
+    color: $dark;
+    box-sizing: border-box;
+
+    @include to($sm) { /////!!!!!
+        font-size: 14px;
+        padding: 0 20px;
+        height: 28px;
+        line-height: 28px;
+    }
+    
+    @include between($sm, $xl) {
+        font-size: calc(14px * 0.75);
+        padding: 0 calc(20px * 0.75);
+        height: calc(28px * 0.75);
+        line-height: calc(28px * 0.75);
+    }
+    
+    @include from($xl) {
+        font-size: 14px;
+        padding: 0 20px;
+        height: 28px;
+        line-height: 28px;
+    }
+
+    &_large {
+        @include to($sm) { /////!!!!!
+            height: 44px;
+            line-height: 44px;
+        }
+        
+        @include between($sm, $xl) {
+            height: calc(44px * 0.75);
+            line-height: calc(44px * 0.75);
+        }
+        
+        @include from($xl) {
+            height: 44px;
+            line-height: 44px;
+        }
+    }
+}

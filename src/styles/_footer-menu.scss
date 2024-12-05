@@ -1,0 +1,33 @@
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @include to($sm) {
+        font-size: 16px;
+    }
+    
+    @include between($sm, $xl) {
+        font-size: calc(12px * 0.75);
+    }
+    
+    @include from($xl) {
+        font-size: 12px;
+    }
+
+    @include from($sm) {
+        &_two-columns {
+            columns: 2;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        width: 100%;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $dark;
+    }
+}

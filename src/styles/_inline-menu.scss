@@ -1,0 +1,54 @@
+.inline-menu {
+    @include to($sm) {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+        white-space: nowrap;
+    }
+
+    &__item {
+        display: inline-block;
+        // margin-bottom: 20px;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        font-weight: 500;
+        color: $dark;
+
+        & + & {
+            margin-left: 11px;
+        }
+    
+        &:hover {
+            color: $blue;
+        }
+    
+        &_active {
+            color: $white !important;
+            background-color: $blue;
+        }
+
+        @include to($sm) { /////!!!!!
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+            font-size: 14px;
+        }
+        
+        @include between($sm, $xl) {
+            height: calc(40px * 0.75);
+            line-height: calc(40px * 0.75);
+            padding: 0 calc(20px * 0.75);
+            font-size: calc(16px * 0.75);
+        }
+        
+        @include from($xl) {
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px;
+            font-size: 16px;
+        }
+    }
+}

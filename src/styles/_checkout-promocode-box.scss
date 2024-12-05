@@ -1,0 +1,47 @@
+.checkout-promocode-box {
+
+    &__button {
+        display: block;
+        width: 100%;
+        padding: 0;
+        font-weight: normal;
+        font-family: $base_font;
+        border: none;
+        text-transform: uppercase;
+        appearance: none;
+        box-sizing: border-box;
+        background-color: transparent;
+        color: $dark;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        @include to($sm) {
+            font-size: 14px;
+            height: 24px;
+            line-height: 24px;
+            padding: 0;
+            text-align: left;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: 12px;
+            height: calc(24px * 0.75);
+            line-height: calc(24px * 0.75);
+            padding: 0 calc(24px * 0.75);
+            text-align: center;
+        }
+        
+        @include from($xl) {
+            font-size: 14px;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 24px;
+            text-align: center;
+        }
+    }
+}

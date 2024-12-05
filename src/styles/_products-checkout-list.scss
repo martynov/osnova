@@ -1,0 +1,37 @@
+.products-checkout-list {
+
+    &__list {
+        @include to($sm) {
+            
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(16px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 16px;
+        }
+    }
+    
+    &__item {
+        @include to($sm) {
+            padding: 23px 20px;
+            margin: 0 -20px;
+        }
+        
+        & + & {
+            @include to($sm) {
+                border-top: 1px solid $beige;
+            }
+            
+            @include between($sm, $xl) {
+                margin-top: calc(55px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-top: 55px;
+            }
+        }
+    }
+}

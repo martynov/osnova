@@ -1,0 +1,31 @@
+.textarea {
+    display: block;
+    width: 100%;
+    font-weight: normal;
+    font-family: $base_font;
+    outline: none;
+    border: none;
+    background: transparent;
+    border: 1px solid $beige;
+    appearance: none;
+    color: $dark;
+    box-sizing: border-box;
+
+    @include to($sm) { /////!!!!!
+        font-size: 14px;
+        padding: 20px 20px;
+        line-height: 18px;
+    }
+    
+    @include between($sm, $xl) {
+        font-size: calc(14px * 0.75);
+        padding: calc(20px * 0.75) calc(20px * 0.75);
+        line-height: calc(18px * 0.75);
+    }
+    
+    @include from($xl) {
+        font-size: 14px;
+        padding: 20px 20px;
+        line-height: 18px;
+    }
+}

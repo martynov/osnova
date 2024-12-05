@@ -1,0 +1,138 @@
+.home-sale-banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: white;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        background: rgba($dark, 0.23);
+        transition: all 0.2s ease;
+    }
+
+    &:hover::before {
+        background: rgba($dark, 0.33);
+    }
+
+    &__background {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        background-position: center;
+        background-size: cover;
+        transform: translate3d(0, 0, 0);
+        transition: all 0.2s ease;
+    }
+
+    &:hover &__background {
+        transform: translate3d(0, 0, 0) scale(1.015);
+    }
+
+    &__link {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 4;
+    }
+
+    &__row {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @include to($sm) { /////!!!!!
+            padding: 45px;
+        }
+        
+        @include between($sm, $xl) {
+            padding: calc(45px * 0.75);
+        }
+        
+        @include from($xl) {
+            padding: 45px;
+        }
+    }
+
+    &__title {
+        text-align: left;
+        font-weight: bold;
+        line-height: 1;
+        margin-bottom: -6px;
+        text-transform: uppercase;
+
+        @include to($sm) { /////!!!!!
+            font-size: 30px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(30px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 30px;
+        }
+
+        & > span {
+            display: block;
+
+            @include to($sm) { /////!!!!!
+                font-size: 76px;
+            }
+            
+            @include between($sm, $xl) {
+                font-size: calc(76px * 0.75);
+            }
+            
+            @include from($xl) {
+                font-size: 76px;
+            }
+        }
+    }
+
+    &__subtitle {
+        position: relative;
+        text-align: left;
+
+        @include to($sm) { /////!!!!!
+            padding-right: 40px;
+        }
+        
+        @include between($sm, $xl) {
+            padding-right: calc(40px * 0.75);
+        }
+        
+        @include from($xl) {
+            padding-right: 40px;
+        }
+
+        &::after {
+            content: "→";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-40%);
+        }
+    }
+}

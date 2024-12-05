@@ -1,0 +1,45 @@
+.hide {
+    &_on- {
+        @include to($xs) {
+            &xxs {
+                display: none;
+            }
+        }
+        
+        @include between($xs, $sm) {
+            &xs {
+                display: none;
+            }
+        }
+        
+        @include between($sm, $md) {
+            &sm {
+                display: none;
+            }
+        }
+        
+        @include between($md, $lg) {
+            &md {
+                display: none;
+            }
+        }
+        
+        @include between($lg, $xl) {
+            &lg {
+                display: none;
+            }
+        }
+        
+        @include between($xl, $xxl) {
+            &xl {
+                display: none;
+            }
+        }
+        
+        @include from($xxl) {
+            &xxl {
+                display: none;
+            }
+        }
+    }
+}

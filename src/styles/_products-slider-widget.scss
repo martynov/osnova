@@ -1,0 +1,24 @@
+.products-slider-widget {
+
+    &__header {
+        
+    }
+
+    &__slider {
+        @include to($sm) {
+            margin: 42px -20px 0;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(47px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 47px;
+        }
+    }
+
+    &__pagination {
+        
+    }
+}

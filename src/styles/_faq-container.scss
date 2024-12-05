@@ -1,0 +1,120 @@
+.faq-container {
+    border-bottom: 1px solid $beige;
+    
+    &__row {
+        border-top: 1px solid $beige;
+    }
+
+    @include to($sm) {
+        &_mobile-border-through {
+            margin: 0 -20px;
+            padding: 0 20px;
+        }
+
+        &_mobile-border-through &__row {
+            margin: 0 -20px;
+            padding: 0 20px;
+        }
+    }
+
+    &__question {
+        position: relative;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        
+        @include to($sm) { /////!!!!!
+            font-size: 16px;
+            padding: 18px 0;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(16px * 0.75);
+            padding: calc(10px * 0.75) 0;
+        }
+        
+        @include from($xl) {
+            font-size: 16px;
+            padding: 10px 0;
+        }
+
+        &::after, &::before {
+            content: '';
+            height: 1px;
+            background-color: $dark;
+            position: absolute;
+            top: 50%;
+            margin-top: -1px;
+            transition: all 0.2s ease;
+
+            @include to($sm) { /////!!!!!
+                width: 11px;
+                right: 8px;
+            }
+            
+            @include between($sm, $xl) {
+                width: calc(11px * 0.75);
+                right: calc(8px * 0.75);
+            }
+            
+            @include from($xl) {
+                width: 11px;
+                right: 8px;
+            }
+        }
+
+        &::after {
+            transform: rotate(-90deg);
+        }
+
+        &::before {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__answer {
+        // padding: 5px 0 30px;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.2s ease;
+
+        @include to($sm) { /////!!!!!
+            font-size: 16px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(16px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 16px;
+        }
+    }
+
+    &__row_visible &__question {
+        cursor: text;
+
+        &::after, &::before {
+            transform: rotate(0);
+        }
+    }
+
+    &__row_visible &__answer {
+        overflow-y: auto;
+
+        @include to($sm) { /////!!!!!
+            padding: 5px 0 30px;
+            max-height: 300px;
+        }
+        
+        @include between($sm, $xl) {
+            padding: 5px 0 calc(30px * 0.75);
+            max-height: calc(300px * 0.75);
+        }
+        
+        @include from($xl) {
+            padding: 5px 0 30px;
+            max-height: 300px;
+        }
+    }
+}

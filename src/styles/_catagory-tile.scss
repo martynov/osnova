@@ -1,0 +1,95 @@
+.catagory-tile {
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-top: calc(630 / 450 * 100%);
+    }
+
+    &__tile {
+        width: 100%;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        background-color: $lightgrey;
+
+        & + & {
+            margin-left: 18px;
+        }
+    }
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-position: center;
+        background-size: cover;
+        transform: translate3d(0, 0, 0);
+        transition: all 0.2s ease;
+    }
+
+    &:hover &__background {
+        opacity: 0.9;
+        transform: translate3d(0, 0, 0) scale(1.025);
+    }
+
+    &__link {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+    }
+
+    &__title {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        color: white;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+        transform: translate3d(0, -50%, 0);
+
+        @include to($sm) { /////!!!!!
+            font-size: 30px;
+            padding: 0 30px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(30px * 0.75);
+            padding: 0 calc(30px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 30px;
+            padding: 0 30px;
+        }
+
+        &_small {
+            @include to($sm) { /////!!!!!
+                font-size: 21px;
+            }
+            
+            @include between($sm, $xl) {
+                font-size: calc(21px * 0.75);
+            }
+            
+            @include from($xl) {
+                font-size: 21px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,251 @@
+<!--
+
+Логика такая:
+
+<div class="mobile-header-menu">
+    <div class="mobile-header-menu__menu">
+        <div class="mobile-header-menu__list">
+            {% for пункт in меню верхнего уровня: %}
+            <div class="mobile-header-menu__item">
+                {% if пункт имеет подменю %}
+                <div class="mobile-header-menu__link mobile-header-menu__link_has-sub">{{ пункт.заголовок }}</div>
+                <div class="mobile-header-menu__sub">
+                    <div class="mobile-header-menu__menu mobile-header-menu__menu_sub">
+                        <div class="mobile-header-menu__list">
+                            {% for подпункт in пункт.подменю (второй уровень): %}
+                            <div class="mobile-header-menu__item">
+                                {% if подпункт имеет подменю %}
+                                <div class="mobile-header-menu__link mobile-header-menu__link_has-sub">{{ подпункт.заголовок }}</div>
+                                <div class="mobile-header-menu__sub">
+                                    <div class="mobile-header-menu__menu mobile-header-menu__menu_sub">
+                                        <div class="mobile-header-menu__list">
+                                            {% for подподпункт in подпункт.подменю %}
+                                            <div class="mobile-header-menu__item">
+                                                <a href="..." class="mobile-header-menu__link">{{ подподпункт.заголовок }}</a>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% if подпункт.бренды %}
+                                    <div class="mobile-header-menu__menu mobile-header-menu__menu_sub">
+                                        <div class="mobile-header-menu__subtitle">Бренды</div>
+                                        <div class="mobile-header-menu__list">
+                                            {% for бренд in подпункт.бренды %}
+                                            <div class="mobile-header-menu__item">
+                                                <a href="..." class="mobile-header-menu__link">{{ бренд.заголовок }}</a>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                {% else %}
+                                <a href="..." class="mobile-header-menu__link">{{ подпункт.заголовок }}</a>
+                                {% endif %}
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <a href="..." class="mobile-header-menu__link">{{ пункт.заголовок }}</a>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+-->
+
+
+<div class="mobile-header-menu">
+    <div class="mobile-header-menu__menu">
+        <div class="mobile-header-menu__list">
+            <div class="mobile-header-menu__item">
+                <div class="mobile-header-menu__link mobile-header-menu__link_has-sub">Женщинам</div>
+                <div class="mobile-header-menu__sub">
+                    <div class="mobile-header-menu__menu mobile-header-menu__menu_sub">
+                        <div class="mobile-header-menu__list">
+                            <div class="mobile-header-menu__item">
+                                <div class="mobile-header-menu__link mobile-header-menu__link_has-sub">Одежда</div>
+                                <div class="mobile-header-menu__sub">
+                                    <div class="mobile-header-menu__menu mobile-header-menu__menu_sub">
+                                        <div class="mobile-header-menu__list">
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Штаны</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Брюки</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Кофты</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Футболки</a>
+                                            </div>
+                                            <!-- ... -->
+                                        </div>
+                                    </div>
+                                    <div class="mobile-header-menu__menu mobile-header-menu__menu_sub">
+                                        <div class="mobile-header-menu__subtitle">Бренды</div>
+                                        <div class="mobile-header-menu__list">
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Adidas</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Nike</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Joma</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Reebok</a>
+                                            </div>
+                                            <!-- ... -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-header-menu__item">
+                                <div class="mobile-header-menu__link mobile-header-menu__link_has-sub">Обувь</div>
+                                <div class="mobile-header-menu__sub">
+                                    <div class="mobile-header-menu__menu mobile-header-menu__menu_sub">
+                                        <div class="mobile-header-menu__list">
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Штаны</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Брюки</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Кофты</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Футболки</a>
+                                            </div>
+                                            <!-- ... -->
+                                        </div>
+                                    </div>
+                                    <div class="mobile-header-menu__menu mobile-header-menu__menu_sub">
+                                        <div class="mobile-header-menu__subtitle">Бренды</div>
+                                        <div class="mobile-header-menu__list">
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Adidas</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Nike</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Joma</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Reebok</a>
+                                            </div>
+                                            <!-- ... -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ... -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-header-menu__item">
+                <div class="mobile-header-menu__link mobile-header-menu__link_has-sub">Мужчинам</div>
+                <div class="mobile-header-menu__sub">
+                    <div class="mobile-header-menu__menu mobile-header-menu__menu_sub">
+                        <div class="mobile-header-menu__list">
+                            <div class="mobile-header-menu__item">
+                                <div class="mobile-header-menu__link mobile-header-menu__link_has-sub">Одежда</div>
+                                <div class="mobile-header-menu__sub">
+                                    <div class="mobile-header-menu__menu mobile-header-menu__menu_sub">
+                                        <div class="mobile-header-menu__list">
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Штаны</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Брюки</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Кофты</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Футболки</a>
+                                            </div>
+                                            <!-- ... -->
+                                        </div>
+                                    </div>
+                                    <div class="mobile-header-menu__menu mobile-header-menu__menu_sub">
+                                        <div class="mobile-header-menu__subtitle">Бренды</div>
+                                        <div class="mobile-header-menu__list">
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Adidas</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Nike</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Joma</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Reebok</a>
+                                            </div>
+                                            <!-- ... -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-header-menu__item">
+                                <div class="mobile-header-menu__link mobile-header-menu__link_has-sub">Обувь</div>
+                                <div class="mobile-header-menu__sub">
+                                    <div class="mobile-header-menu__menu mobile-header-menu__menu_sub">
+                                        <div class="mobile-header-menu__list">
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Штаны</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Брюки</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Кофты</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Футболки</a>
+                                            </div>
+                                            <!-- ... -->
+                                        </div>
+                                    </div>
+                                    <div class="mobile-header-menu__menu mobile-header-menu__menu_sub">
+                                        <div class="mobile-header-menu__subtitle">Бренды</div>
+                                        <div class="mobile-header-menu__list">
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Adidas</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Nike</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Joma</a>
+                                            </div>
+                                            <div class="mobile-header-menu__item">
+                                                <a href="#" class="mobile-header-menu__link">Reebok</a>
+                                            </div>
+                                            <!-- ... -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ... -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-header-menu__item">
+                <a href="#" class="mobile-header-menu__link mobile-header-menu__link_red">Распродажа</a>
+            </div>
+            <!-- ... -->
+        </div>
+    </div>
+</div>

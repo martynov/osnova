@@ -1,0 +1,69 @@
+.product-color-variants {
+
+    &__row {
+        display: flex;
+    }
+
+    &__item {
+        & + & {
+            @include to($sm) { /////!!!!!
+                margin-left: 18px;
+            }
+            
+            @include between($sm, $xl) {
+                margin-left: calc(18px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-left: 18px;
+            }
+        }
+
+        &_active {
+            position: relative;
+            pointer-events: none;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: $blue;
+            }
+        }
+    }
+
+
+    &__link {
+        display: block;
+        transition: all 0.2s ease;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    &__image {
+        background-color: $lightgray;
+        background-position: center;
+        background-size: cover;
+
+        @include to($sm) { /////!!!!!
+            width: 80px;
+            height: 50px;
+        }
+        
+        @include between($sm, $xl) {
+            width: calc(80px * 0.75);
+            height: calc(50px * 0.75);
+        }
+        
+        @include from($xl) {
+            width: 80px;
+            height: 50px;
+        }
+    }
+}

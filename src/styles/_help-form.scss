@@ -1,0 +1,126 @@
+.help-form {
+    background-color: rgba($beige, 0.2);
+
+    @include to($sm) { /////!!!!!
+        padding: 36px 20px;
+        margin: 0 -20px;
+    }
+    
+    @include between($sm, $xl) {
+        padding: calc(32px * 0.75) calc(70px * 0.75);
+    }
+    
+    @include from($xl) {
+        padding: 32px 70px;
+    }
+
+    &__subtitle {
+        text-align: center;
+
+        @include to($sm) {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-bottom: calc(16px * 0.75);
+            font-size: calc(16px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: bold;
+
+        @include to($sm) {
+            margin-bottom: 36px;
+            font-size: 18px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-bottom: calc(44px * 0.75);
+            font-size: calc(24px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-bottom: 44px;
+            font-size: 24px;
+        }
+
+    }
+
+    &__fieldset {
+        border: none;
+        margin: 0;
+        padding: 0;
+
+        & + & {
+            @include to($sm) { /////!!!!!
+                margin-top: 24px;
+            }
+            
+            @include between($sm, $xl) {
+                margin-top: calc(24px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-top: 24px;
+            }
+        }
+    }
+
+    &__input {
+
+    }
+
+    &__textarea {
+        height: 90px;
+
+        @include to($sm) {
+            margin-top: 32px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(60px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 60px;
+        }
+    }
+
+    &__checkbox-row {
+        display: flex;
+        margin: 50px 0 55px;
+        gap: 48px;
+    }
+
+    &__footer {
+        display: flex;
+
+        @include to($sm) {
+            margin-top: 32px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(52px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 52px;
+        }
+    }
+
+    &__button {
+        margin-left: auto;
+
+        @include to($sm) {
+            width: 100%;
+        }
+    }
+}

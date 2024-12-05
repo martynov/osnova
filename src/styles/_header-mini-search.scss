@@ -1,0 +1,38 @@
+.header-mini-search {
+
+    &__form {
+        
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        outline: none;
+        border: 1px solid $lightgray;
+        border-radius: 0;
+        appearance: none;
+        font-family: $base_font;
+        box-sizing: border-box;
+
+        @include to($sm) { /////!!!!!
+            height: 32px;
+            line-height: 32px;
+            padding: 0 22px;
+            font-size: 14px;
+        }
+        
+        @include between($sm, $xl) {
+            height: calc(32px * 0.75);
+            line-height: calc(32px * 0.75);
+            padding: 0 calc(22px * 0.75);
+            font-size: calc(14px * 0.75);
+        }
+        
+        @include from($xl) {
+            height: 32px;
+            line-height: 32px;
+            padding: 0 22px;
+            font-size: 14px;
+        }
+    }
+}

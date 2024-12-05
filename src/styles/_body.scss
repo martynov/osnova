@@ -1,0 +1,21 @@
+.body {
+    font-family: $base_font;
+    font-weight: normal;
+    color: $dark;
+    background: $white;
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+    
+    @include to($sm) {
+        font-size: 16px; /////!!!!!
+    }
+
+    @include between($sm, $xl) {
+        font-size: calc(16px * 0.75);
+    }
+
+    @include from($xl) {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,32 @@
+.lookbook-page {
+
+    &__body {
+        @include to($sm) { /////!!!!!
+            margin-top: 50px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(50px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 50px;
+        }
+    }
+
+    &__row {
+        & + & {
+            @include to($sm) { /////!!!!!
+                margin-top: 84px;
+            }
+            
+            @include between($sm, $xl) {
+                margin-top: calc(84px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-top: 84px;
+            }
+        }
+    }
+}

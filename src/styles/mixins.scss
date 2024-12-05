@@ -1,0 +1,49 @@
+@mixin from($min) {
+    @media only screen and (min-width: ($min + 1px)) {
+        @content;
+    }
+}
+
+@mixin to($max) {
+    @media only screen and (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin between($min, $max) {
+    @media only screen and (min-width: ($min + 1px)) and (max-width: $max) {
+        @content
+    }
+}
+
+
+@mixin on_mobile() {
+    @media only screen and (max-width: $screen_xs_max) {
+        @content;
+    }
+}
+
+@mixin on_tablet() {
+    @media only screen and (min-width: $screen_sm_min) and (max-width: $screen_sm_max) {
+        @content
+    }
+}
+
+@mixin on_laptop() {
+    @media only screen and (min-width: $screen_md_min) and (max-width: $screen_md_max) {
+        @content;
+    }
+}
+
+@mixin on_desktop() {
+    @media only screen and (min-width: $screen_lg_min) {
+        @content;
+    }
+}
+
+@mixin disableHighlight() {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+    outline: none;
+}

@@ -1,0 +1,91 @@
+.aside-menu {
+
+    &__menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        border-top: 1px solid $beige;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: #f2f0ec;
+        }
+
+        &_red {
+            color: $red;
+        }
+
+        @include to($sm) { /////!!!!!
+            font-size: 16px;
+            padding: 18px 0;
+            padding-left: 30px; // extend from .wrapper
+            margin-left: -30px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(16px * 0.75);
+            padding: calc(18px * 0.75) 0;
+            padding-left: calc(30px * 0.75); // extend from .wrapper
+            margin-left: calc(-30px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 16px;
+            padding: 18px 0;
+            padding-left: 30px; // extend from .wrapper
+            margin-left: -30px;
+        }
+    }
+
+    &__item:last-child &__link {
+        border-bottom: 1px solid $beige;
+    }
+
+    &__footer {
+        @include to($sm) { /////!!!!!
+            padding-top: 18px;
+        }
+        
+        @include between($sm, $xl) {
+            padding-top: calc(18px * 0.75);
+        }
+        
+        @include from($xl) {
+            padding-top: 18px;
+        }
+    }
+
+    &__foot-line {
+        & + & {
+            margin-top: 5px;
+        }
+    }
+
+    &__foot-link {
+        font-size: 12px;
+        text-decoration: underline;
+        color: $dark;
+
+        @include to($sm) { /////!!!!!
+            font-size: 12px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(12px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include to($sm) {
+        margin: 0 -20px;
+        gap: 55px 8px;
+    }
+    
+    @include between($sm, $xl) {
+        gap: calc(100px * 0.75) calc(18px * 0.75);
+    }
+    
+    @include from($xl) {
+        gap: 100px 18px;
+    }
+    
+    &__item {
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        @include to($sm) {
+            width: calc(50% - 8px / 2);
+        }
+    }
+
+    @mixin itemWidth($columns, $margin) {
+        width: calc((100% / $columns) - ($margin / $columns * ($columns - 1)))
+    }
+    
+    // Список товаров на полную ширину страницы
+    &_full &__item {
+        @include between($sm, $xl) {
+            @include itemWidth(4, calc(18px * 0.75));
+        }
+
+        @include from($xl) {
+            @include itemWidth(4, 18px);
+        }
+    }
+
+    // Список товаров в колонке основного контента, с сайдбаром сбоку
+    &_wide &__item {
+        @include between($sm, $xl) {
+            @include itemWidth(3, calc(18px * 0.75));
+        }
+
+        @include from($xl) {
+            @include itemWidth(3, 18px);
+        }
+    }
+}

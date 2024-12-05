@@ -1,0 +1,47 @@
+.lookbook-cards-row {
+    display: flex;
+
+    @include to($sm) {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    &__item {
+        @include to($sm) {
+            width: calc(50% - 8px / 2);
+            margin-bottom: 40px;
+        }
+        
+        @include between($sm, $xl) {
+            width: 25%;
+        }
+        
+        @include from($xl) {
+            width: 25%;
+        }
+
+        &_wide {
+            @include to($sm) {
+                width: 100%;
+            }
+            
+            @include between($sm, $xl) {
+                width: calc(50% + 18px * 0.75);
+            }
+            
+            @include from($xl) {
+                width: calc(50% + 18px);
+            }
+        }
+
+        & + & {
+            @include between($sm, $xl) {
+                margin-left: calc(18px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-left: 18px;
+            }
+        }
+    }
+}

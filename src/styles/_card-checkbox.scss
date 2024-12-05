@@ -1,0 +1,105 @@
+.card-checkbox , .cards-checkbox {
+    display: block;
+
+    &__input {
+        display: none;
+    }
+
+    &__card {
+        position: relative;
+        border: 1px solid $beige;
+        transition: all 0.2s ease;
+
+        @include to($sm) {
+            padding: 23px;
+        }
+        
+        @include between($sm, $xl) {
+            padding: 16px;
+        }
+        
+        @include from($xl) {
+            padding: 25px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            border-bottom: 1px solid $dark;
+            border-left: 1px solid $dark;
+            transform: rotate(-45deg);
+            opacity: 0;
+            transition: all 0.2s ease;
+
+            @include to($sm) { /////!!!!!
+                top: 20px;
+                right: 20px;
+                width: 14px;
+                height: 6px;
+            }
+            
+            @include between($sm, $xl) {
+                top: calc(20px * 0.75);
+                right: calc(20px * 0.75);
+                width: calc(14px * 0.75);
+                height: calc(6px * 0.75);
+            }
+            
+            @include from($xl) {
+                top: 20px;
+                right: 20px;
+                width: 14px;
+                height: 6px;
+            }
+        }
+    }
+    
+    &__title {
+        text-transform: uppercase;
+
+        @include to($sm) {
+            font-size: 14px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: 12px;
+        }
+        
+        @include from($xl) {
+            font-size: 14px;
+        }
+    }
+
+    &__description {
+        font-weight: 200;
+
+        @include to($sm) {
+            font-size: 12px;
+            margin-top: 4px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: 12px;
+            margin-top: calc(4px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 12px;
+            margin-top: 4px;
+        }
+    }
+
+    &__input:checked ~ &__card {
+        border-color: black;
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &__input[disabled] ~ &__card {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+}

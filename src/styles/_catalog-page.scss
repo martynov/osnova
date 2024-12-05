@@ -1,0 +1,73 @@
+.catalog-page {
+
+    &__cover {
+        background-color: $lightgray;
+        background-position: center;
+        background-size: cover;
+
+        @include to($sm) { /////!!!!!
+            padding-top: 250px;
+        }
+        
+        @include between($sm, $xl) {
+            padding-top: calc(250px * 0.75);
+        }
+        
+        @include from($xl) {
+            padding-top: 250px;
+        }
+    }
+
+    &__settings-row {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+
+        @include to($sm) { /////!!!!!
+            margin-top: 28px;
+            margin-bottom: 47px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(28px * 0.75);
+            margin-bottom: calc(47px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 28px;
+            margin-bottom: 47px;
+        }
+    }
+
+    &__order-by {
+        @include to($sm) { /////!!!!!
+            width: 180px;
+        }
+        
+        @include between($sm, $xl) {
+            width: calc(180px * 0.75);
+        }
+        
+        @include from($xl) {
+            width: 180px;
+        }
+    }
+
+    &__footer {
+        @include to($sm) { /////!!!!!
+            margin-top: 80px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(80px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 80px;
+        }
+    }
+    
+    &__pagination {
+        
+    }
+}

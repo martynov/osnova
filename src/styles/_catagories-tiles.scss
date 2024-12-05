@@ -1,0 +1,39 @@
+.catagories-tiles {
+
+    &__row {
+        display: flex;
+
+        @include to($sm) {
+            overflow-y: scroll;
+        }
+    }
+
+    &__item {
+        display: block;
+        position: relative;
+        background-color: $lightgrey;
+
+        & + & {
+            @include to($sm) {
+                margin-left: 8px;
+            }
+            
+            @include between($sm, $xl) {
+                margin-left: calc(18px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-left: 18px;
+            }
+        }
+
+        @include to($sm) {
+            flex-shrink: 0;
+            width: calc(100% / 2.2);
+        }
+
+        @include from($sm) {
+            width: 100%;
+        }
+    }
+}

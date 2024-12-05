@@ -1,0 +1,96 @@
+.blog-post-preview {
+    display: block;
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__thumbnail {
+        position: relative;
+        overflow: hidden;
+
+        @include to($sm) { /////!!!!!
+            padding-top: 580px;
+        }
+        
+        @include between($sm, $xl) {
+            padding-top: calc(580px * 0.75);
+        }
+        
+        @include from($xl) {
+            padding-top: 580px;
+        }
+    }
+    
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $lightgrey;
+        background-size: cover;
+        background-position: center;
+        transform: translate3d(0, 0, 0);
+        transition: all 0.2s ease;
+    }
+
+    &__link:hover &__image {
+        opacity: 0.9;
+        transform: translate3d(0, 0, 0) scale(1.025);
+    }
+
+    &__footer {
+        @include to($sm) {
+            padding: 0 20px;
+        }
+    }
+
+    &__subtitle {
+        font-weight: bold;
+        transition: all 0.2s ease;
+
+        @include to($sm) { /////!!!!!
+            font-size: 18px;
+            margin-top: 16px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(18px * 0.75);
+            margin-top: calc(16px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 18px;
+            margin-top: 16px;
+        }
+
+        &::after {
+            content: "→";
+            margin-left: 16px;
+        }
+    }
+
+    &__link:hover &__subtitle {
+        opacity: 0.8;
+    }
+
+    &__date {
+        color: #838383;
+        float: right;
+        padding: 2px 0;
+
+        @include to($sm) { /////!!!!!
+            font-size: 14px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(14px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.filter-fieldset {
+
+    &__title {
+        font-weight: bold;
+        text-transform: uppercase;
+
+        @include to($sm) { /////!!!!!
+            font-size: 16px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(16px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 16px;
+        }
+    }
+
+    &__checkbox-list {
+
+    }
+
+    &__title + &__checkbox-list {
+        @include to($sm) { /////!!!!!
+            margin-top: 16px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(16px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 16px;
+        }
+    }
+}

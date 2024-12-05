@@ -1,0 +1,74 @@
+.button {
+    display: block;
+    border-radius: 0;
+    font-weight: 600;
+    font-family: $base_font;
+    text-transform: uppercase;
+    appearance: none;
+    box-sizing: border-box;
+    border-style: solid;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    @include to($sm) {
+        width: 100%;
+        font-size: 14px;
+        height: 50px;
+        line-height: calc(50px - 4px);
+        border-width: 2px;
+        padding: 0 24px;
+    }
+    
+    @include between($sm, $xl) {
+        font-size: calc(14px * 0.75);
+        height: 28px;
+        line-height: 26px;
+        border-width: 1px;
+        padding: 0 calc(24px * 0.75);
+    }
+    
+    @include from($xl) {
+        font-size: 14px;
+        height: 36px;
+        line-height: calc(36px - 4px);
+        border-width: 2px;
+        padding: 0 24px;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+    
+    &_dark {
+        background-color: $dark;
+        border-color: $dark;
+        color: $white;
+    }
+
+    &_linear {
+        background-color: $white;
+        border-color: $dark;
+        color: $dark;
+    }
+
+    &_beige {
+        background-color: $beige;
+        border-color: $beige;
+        color: $dark;
+    }
+
+    &_blue {
+        background-color: $blue;
+        border-color: $blue;
+        color: $white;
+    }
+
+    &_transparent {
+        background-color: transparent;
+        border-color: transparent;
+        color: $dark;
+        text-decoration: underline;
+    }
+}

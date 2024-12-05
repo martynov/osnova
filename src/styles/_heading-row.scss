@@ -1,0 +1,87 @@
+.heading-row {
+    @include from($sm) {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__title {
+        font-weight: bold;
+
+        @include to($sm) {
+            font-size: 31px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: 26px;
+        }
+        
+        @include from($xl) {
+            font-size: 38px;
+        }
+    }
+
+    &__counter {
+        margin-left: 10px;
+        opacity: 0.6;
+
+        @include to($sm) {
+            display: none;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(12px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 12px;
+        }
+    }
+
+    &__tabs-menu {
+        @include to($sm) {
+            margin-top: 24px;
+        }
+
+        @include from($sm) {
+            margin-left: 110px;
+            align-self: center;
+        }
+    }
+
+    &__aside {
+        margin-left: auto;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $dark;
+        transition: all 0.2s ease;
+
+        &::after {
+            content: "→";
+            margin-left: 16px;
+        }
+
+        &:hover {
+            color: $blue;
+        }
+
+        @include to($sm) { /////!!!!!
+            font-size: 14px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(14px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 14px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        position: relative;
+        top: 5px;
+    }
+}

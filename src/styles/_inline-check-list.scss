@@ -1,0 +1,36 @@
+.inline-check-list {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        
+        @include to($sm) { /////!!!!!
+            margin: -10px -12px;
+        }
+        
+        @include between($sm, $xl) {
+            margin: calc(-10px * 0.75) calc(-12px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin: -10px -12px;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        cursor: pointer;
+        
+        @include to($sm) { /////!!!!!
+            margin: 10px 12px;
+        }
+        
+        @include between($sm, $xl) {
+            margin: calc(10px * 0.75) calc(12px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin: 10px 12px;
+        }
+    }
+}

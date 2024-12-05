@@ -1,0 +1,94 @@
+.checkout-page {
+
+    &__wrapper {
+
+        &_border-top {
+            border-top: 1px solid $beige;
+
+            @include to($sm) { /////!!!!!
+                margin-top: 90px;
+                padding-top: 45px;
+                padding-bottom: 45px;
+            }
+            
+            @include between($sm, $xl) {
+                margin-top: calc(90px * 0.75);
+                padding-top: calc(45px * 0.75);
+                padding-bottom: calc(45px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-top: 90px;
+                padding-top: 45px;
+                padding-bottom: 45px;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-weight: bold;
+        text-transform: uppercase;
+        
+        @include to($sm) { /////!!!!!
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-bottom: calc(50px * 0.75);
+            font-size: calc(18px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__row {
+        @include from($sm) {
+            display: flex;
+        }
+    }
+
+    &__column {
+
+        &_main {
+            @include from($sm) {
+                width: 75%;
+            }
+        }
+        
+        &_aside {
+            @include to($sm) {
+                
+            }
+            
+            @include from($sm) {
+                width: 25%;
+            }
+            
+            @include between($sm, $xl) {
+                margin-left: calc(55px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-left: 55px;
+            }
+        }
+
+        @include to($sm) {
+            padding: 0 20px 30px;
+            margin: 0 -20px;
+
+            & + & {
+                padding-top: 30px;
+                border-top: 1px solid $beige;
+            }
+        }
+    }
+
+    &__back-button {
+        margin-bottom: 32px;
+    }
+}

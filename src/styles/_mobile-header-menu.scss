@@ -1,0 +1,129 @@
+.mobile-header-menu {
+    border-bottom: 1px solid $beige;
+    
+    &__item {
+
+    }
+
+    &__link {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        color: $dark;
+        cursor: pointer;
+
+        &_red {
+            color: $red;
+        }
+    }
+
+    // Первый уровень
+
+    // Пункт меню
+    & > &__menu > &__list > &__item > &__link {
+        text-transform: uppercase;
+        font-weight: bold;
+        border-top: 1px solid $beige;
+        font-size: 16px;
+        padding: 18px 25px;
+
+        &_has-sub {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 25px;
+                margin-top: -1px;
+                width: 8px;
+                height: 8px;
+                border-bottom: 1px solid $dark;
+                border-left: 1px solid $dark;
+                transition: all 0.2s ease;
+                transform: translateY(-55%) rotate(-45deg);
+            }
+        }
+        
+        &_active::after {
+            transform: translateY(15%) rotate(calc(-45deg + 180deg));
+        }
+    }
+    
+    // Второй уровень
+
+    // Пункт меню
+    & > &__menu > &__list > &__item > &__sub > &__menu > &__list > &__item > &__link {
+        font-weight: bold;
+        font-size: 16px;
+        border-top: 1px solid $beige;
+        padding: 16px 25px;
+
+        &_has-sub {
+            &::after, &::before {
+                content: '';
+                height: 1px;
+                background-color: $dark;
+                position: absolute;
+                top: 50%;
+                margin-top: -1px;
+                transition: all 0.2s ease;
+                width: 11px;
+                right: 25px;
+            }
+
+            &::after {
+                transform: rotate(-90deg);
+            }
+
+            &::before {
+                transform: rotate(180deg);
+            }
+        }
+
+        &_active {
+            &::after, &::before {
+                transform: rotate(0);
+            }
+        }
+    }
+
+    // Третий уровень
+
+    & > &__menu > &__list > &__item > &__sub > &__menu > &__list > &__item > &__sub > &__menu {
+        padding: 5px 0;
+
+        &:first-child {
+            margin-top: -10px;
+        }
+    }
+
+    & > &__menu > &__list > &__item > &__sub > &__menu > &__list > &__item > &__sub > &__menu + &__menu {
+        border-top: 1px solid $beige;
+    }
+
+    & > &__menu > &__list > &__item > &__sub > &__menu > &__list > &__item > &__sub > &__menu > &__subtitle {
+        font-size: 16px;
+        padding: 6px 25px 6px 50px;
+        font-weight: bold;
+    }
+
+    & > &__menu > &__list > &__item > &__sub > &__menu > &__list > &__item > &__sub > &__menu > &__list > &__item > &__link {
+        font-size: 16px;
+        padding: 6px 25px 6px 50px;
+    }
+
+    // end
+
+
+    &__sub {
+        display: none;
+        font-size: 16px;
+    }
+
+    &__item_visible > &__link {
+        cursor: text;
+    }
+
+    &__item_visible > &__sub {
+        display: block;
+    }
+}

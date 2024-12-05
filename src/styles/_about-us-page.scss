@@ -1,0 +1,195 @@
+.about-us-page {
+
+    &__section {
+        & + & {
+            @include to($sm) {
+                margin-top: 60px;
+            }
+            
+            @include between($sm, $xl) {
+                margin-top: calc(40px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-top: 40px;
+            }
+        }
+
+        &_text {
+            @include between($sm, $xl) {
+                padding: calc(40px * 0.75) 0;
+            }
+            
+            @include from($xl) {
+                padding: 40px 0;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+
+        @include to($sm) {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(46px * 0.75);
+            margin-bottom: calc(36px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 45px;
+            margin-bottom: 36px;
+
+            &_last {
+                width: 450px;
+                margin: 0 auto -20px;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-weight: bold;
+    
+        @include to($sm) {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(24px * 0.75);
+            margin-bottom: calc(24px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__row {
+        @include from($sm) {
+            display: flex;
+
+            &_revert {
+                flex-direction: row-reverse;
+            }
+
+            &_bottom {
+                align-items: flex-end;
+            }
+        }
+
+        @include between($sm, $xl) {
+            gap: calc(94px * 0.75);
+        }
+
+        @include to($sm) {
+            > * + * {
+                margin-top: 48px;
+            }
+        }
+        
+        // @include from($xl) {
+        //     // gap: 94px;
+        // }
+    }
+    
+    &__column {
+        @include from($sm) {
+            flex-grow: 1;
+            flex-shrink: 1;
+            width: 50%;
+
+            &_text {
+                align-self: center;
+            }
+
+            &_image {
+                
+            }
+        }
+    }
+
+    &__image {
+        font-size: 0;
+
+        @include from($xl) {
+            margin: 0 50px;
+        }
+
+        > img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 72px 0 -36px $blue;
+        }
+
+        &_vertical {
+            width: 450px;
+            margin: 0 auto !important;
+        }
+    }
+
+    &__box {
+        @include from($xl) {
+            margin-left: 80px;
+        }
+    }
+
+    &__text {
+
+    }
+
+    &__text-columns {
+        @include to($sm) {
+            &_mobile {
+                margin-top: 42px;
+                display: flex;
+                gap: 42px;
+            }
+        }
+
+        @include from($sm) {
+            display: flex;
+            gap: 20%;
+            margin-top: 32px;
+        }
+    }
+
+    &__text-column {
+        @include from($sm) {
+            flex-grow: 1;
+            flex-shrink: 1;
+            width: 50%;
+        }
+    }
+
+    &__text-columns_mobile &__text-column {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: 50%;
+
+        .about-us-page__text {
+            margin-bottom: auto;
+        }
+    }
+
+    &__button {
+        margin-top: 30px;
+
+        @include from($sm) {
+            width: 160px;
+        }
+    }
+
+    &__lookbook {
+        @include to($sm) {
+            margin: 0 -20px;
+        }
+    }
+}

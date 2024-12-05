@@ -1,0 +1,143 @@
+.header-dropdown {
+    
+    &__row {
+        display: flex;
+
+        @include to($sm) { /////!!!!!
+            padding: 35px 0;
+        }
+        
+        @include between($sm, $xl) {
+            padding: calc(35px * 0.75) 0;
+        }
+        
+        @include from($xl) {
+            padding: 35px 0;
+        }
+    }
+
+    &__column {
+
+        &_aside {
+            width: 20%;
+        }
+        
+        &_main {
+            width: 50%;
+            
+            @include to($sm) { /////!!!!!
+                margin-left: 48px;
+            }
+            
+            @include between($sm, $xl) {
+                margin-left: calc(48px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-left: 48px;
+            }
+        }
+        
+        &_tile {
+            width: 30%;
+
+            @include to($sm) { /////!!!!!
+                margin-left: 48px;
+            }
+            
+            @include between($sm, $xl) {
+                margin-left: calc(48px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-left: 48px;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-weight: bold;
+            
+        @include to($sm) { /////!!!!!
+            font-size: 16px;
+            margin-bottom: 18px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(16px * 0.75);
+            margin-bottom: calc(18px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 16px;
+            margin-bottom: 18px;
+        }
+    }
+
+    &__main {
+        display: flex;
+    }
+
+    &__menu-column {
+        width: 50%;
+    }
+
+    &__main-menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__menu-item {
+        & + & {
+            @include to($sm) { /////!!!!!
+                margin-top: 16px;
+            }
+            
+            @include between($sm, $xl) {
+                margin-top: calc(16px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-top: 16px;
+            }
+        }
+    }
+
+    &__menu-link {
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.2s ease;
+        
+        @include to($sm) { /////!!!!!
+            font-size: 16px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(16px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 16px;
+        }
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &__tile {
+        @include to($sm) { /////!!!!!
+            max-width: 300px;
+        }
+        
+        @include between($sm, $xl) {
+            max-width: calc(300px * 0.75);
+        }
+        
+        @include from($xl) {
+            max-width: 300px;
+        }
+    }
+
+}

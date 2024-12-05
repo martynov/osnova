@@ -1,0 +1,56 @@
+.home-promo-row {
+    &__column {
+        position: relative;
+    }
+
+    @include to($sm) {
+        margin: 0 -20px;
+
+        &__column {
+            & + & {
+                margin-top: 10px;
+            }
+
+            &_sale {
+                padding-top: 100%;
+            }
+        }
+    }
+
+    @include from($sm) {
+        display: flex;
+
+        &__column {
+            &_discount {
+                width: calc(100% / 3 * 2);
+                background-color: $lightgrey;
+            }
+            
+            &_sale {
+                width: calc(100% / 3 * 1);
+                background-color: $lightgrey;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    padding-top: 100%;
+                }
+            }
+
+            & + & {
+                @include to($sm) { /////!!!!!
+                    margin-left: 18px;
+                }
+                
+                @include between($sm, $xl) {
+                    margin-left: calc(18px * 0.75);
+                }
+                
+                @include from($xl) {
+                    margin-left: 18px;
+                }
+            }
+        }
+    }
+}

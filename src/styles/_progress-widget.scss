@@ -1,0 +1,119 @@
+.progress-widget {
+    position: relative;
+    color: $beige;
+
+    @include to($sm) { /////!!!!!
+        
+    }
+
+    @include between($sm, $xl) {
+        
+    }
+
+    @include from($xl) {
+        
+    }
+
+    &__handler {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+
+    &__handler-value {
+        display: block;
+        height: 3px;
+        position: relative;
+        z-index: 2;
+        background-color: $blue;
+
+        &::after {
+            content: "";
+            display: block;
+            top: 50%;
+            left: 100%;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid $blue;
+            position: absolute;
+            z-index: 1;
+            background-color: $blue;
+            transform: translate3d(-50%, -50%, 0);
+        }
+    }
+
+    &__row {
+        display: flex;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: $beige;
+        }
+    }
+
+    &__item {
+        position: relative;
+        flex-grow: 1;
+        flex-shrink: 0;
+        text-align: center;
+        padding-top: 12px;
+
+        &:first-child {
+            text-align: left;
+            margin-right: -5%;
+        }
+        
+        &:last-child {
+            text-align: right;
+            margin-left: -5%;
+        }
+
+        &_active {
+            color: $blue;
+        }
+    }
+
+    &__point {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 1px solid $beige;
+        position: absolute;
+        top: -0.5px;
+        left: 50%;
+        background-color: white;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    &__item:first-child &__point {
+        left: 0;
+        transform: translate3d(0, -50%, 0);
+    }
+
+    &__item:last-child &__point {
+        left: 100%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    &__item_active &__point {
+        display: none;
+    }
+
+    &__title {
+        font-size: 12px;
+    }
+    
+    &__subtitle {
+        font-size: 12px;
+        font-weight: 600;
+    }
+}

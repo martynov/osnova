@@ -1,0 +1,16 @@
+.mobile-header-dropdown {
+    height: calc(100vh - 79px);
+    overflow-y: scroll;
+
+    &__login-wrapper {
+        padding: 18px 25px;
+    }
+
+    &__login-link {
+        font-size: 12px;
+        color: #5c5c5c;
+        text-decoration: none;
+        border-bottom: 1px solid #5c5c5c;
+        line-height: 1;
+    }
+}

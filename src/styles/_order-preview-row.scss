@@ -1,0 +1,127 @@
+.order-preview-row {
+
+    @include to($sm) { /////!!!!!
+        font-size: 14px;
+    }
+    
+    @include between($sm, $xl) {
+        font-size: calc(14px * 0.75);
+    }
+    
+    @include from($xl) {
+        font-size: 14px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__column {
+
+        &_info {
+            
+        }
+
+        &_products {
+            
+        }
+    }
+
+    &__head-line {
+        position: relative;
+        padding-left: 14px;
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        font-weight: bold;
+        text-transform: uppercase;
+
+        @include to($sm) { /////!!!!!
+            font-size: 16px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(16px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 16px;
+        }
+    }
+
+    &__status {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -2px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+
+        &_red {
+            background-color: $red;
+        }
+
+        &_green {
+            background-color: #45c300;
+        }
+
+        &_dark {
+            background-color: $dark;
+        }
+    }
+
+    &__info-line {
+        margin-bottom: 8px;
+
+        > span {
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+
+    &__previews-list {
+        display: flex;
+        gap: 5px;
+    }
+
+    &__photo {
+        background-position: center;
+        background-size: cover;
+
+        @include to($sm) { /////!!!!!
+            width: 43px;
+        }
+        
+        @include between($sm, $xl) {
+            width: calc(43px * 0.75);
+        }
+        
+        @include from($xl) {
+            width: 43px;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-top: calc(100% / 43 * 57);
+        }
+    }
+
+    &__products-counter {
+        font-size: 12px;
+        margin-top: 14px;
+        text-align: right;
+    }
+
+    &__price {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+}

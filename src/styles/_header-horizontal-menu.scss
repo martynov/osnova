@@ -1,0 +1,56 @@
+.header-horizontal-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+
+    @include to($sm) { /////!!!!!
+        height: 38px;
+    }
+    
+    @include between($sm, $xl) {
+        height: calc(38px * 0.75);
+    }
+    
+    @include from($xl) {
+        height: 38px;
+    }
+
+    &__item {
+        padding: 0;
+        margin: 0;
+
+        & + & {
+            @include to($sm) { /////!!!!!
+                margin-left: 55px;
+            }
+            
+            @include between($sm, $xl) {
+                margin-left: calc(55px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-left: 55px;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $dark;
+
+        @include to($sm) { /////!!!!!
+            font-size: 18px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: 14px;
+        }
+        
+        @include from($xl) {
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.main-banner {
+
+    &__wrapper {
+
+    }
+
+    &__slide {
+
+    }
+
+    &__banner {
+        position: relative;
+
+        @include to($sm) {
+            padding-top: 80vh;
+        }
+        
+        @include between($sm, $xl) {
+            padding-top: calc(420px * 0.75);
+        }
+        
+        @include from($xl) {
+            padding-top: 420px;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-position: center;
+        background-size: cover;
+        display: none;
+
+        @include to($xs) {
+            &_xxs {
+                display: block;
+            }
+        }
+
+        @include between($xs, $sm) {
+            &_xs {
+                display: block;
+            }
+        }
+
+        @include between($sm, $md) {
+            &_sm {
+                display: block;
+            }
+        }
+
+        @include between($md, $lg) {
+            &_md {
+                display: block;
+            }
+        }
+
+        @include between($lg, $xl) {
+            &_lg {
+                display: block;
+            }
+        }
+
+        @include between($xl, $xxl) {
+            &_xl {
+                display: block;
+            }
+        }
+
+        @include from($xxl) {
+            &_xxl {
+                display: block;
+            }
+        }
+
+    }
+}

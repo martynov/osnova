@@ -1,0 +1,16 @@
+.wrapper {
+    @include to($sm) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    @include between($sm, $xl) {
+        padding-left: calc(30px * 0.75);
+        padding-right: calc(30px * 0.75);
+    }
+    
+    @include from($xl) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

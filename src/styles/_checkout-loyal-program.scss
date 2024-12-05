@@ -1,0 +1,46 @@
+.checkout-loyal-program {
+
+    &__button {
+        display: block;
+        width: 100%;
+        padding: 0;
+        font-weight: normal;
+        font-family: $base_font;
+        border: none;
+        appearance: none;
+        box-sizing: border-box;
+        background-color: transparent;
+        color: $dark;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    
+        &:hover {
+            opacity: 0.9;
+        }
+
+        @include to($sm) {
+            font-size: 12px;
+            height: 20px;
+            line-height: 20px;
+            padding: 0;
+            text-align: left;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(12px * 0.75);
+            height: calc(20px * 0.75);
+            line-height: calc(20px * 0.75);
+            padding: 0 calc(24px * 0.75);
+            text-align: center;
+        }
+        
+        @include from($xl) {
+            font-size: 12px;
+            height: 20px;
+            line-height: 20px;
+            padding: 0 24px;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.dashboard-head-filter {
+    border: 1px solid $beige;
+    padding: 16px;
+
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+
+    &__column {
+
+        & + & {
+            @include to($sm) { /////!!!!!
+                margin-left: 36px;
+            }
+
+            @include between($sm, $xl) {
+                margin-left: calc(36px * 0.75);
+            }
+
+            @include from($xl) {
+                margin-left: 36px;
+            }
+        }
+
+        &_subtitle {
+            padding: 0 24px;
+        }
+        
+        &_search {
+            margin-right: auto;
+        }
+
+        &_order-by {
+            
+        }
+
+        &_filter {
+            
+        }
+    }
+
+    &__search {
+        display: block;
+        width: 100%;
+        outline: none;
+        border: 1px solid $lightgray;
+        border-radius: 0;
+        appearance: none;
+        font-family: $base_font;
+        box-sizing: border-box;
+
+        @include to($sm) { /////!!!!!
+            height: 32px;
+            line-height: 32px;
+            padding: 0 22px;
+            font-size: 14px;
+        }
+        
+        @include between($sm, $xl) {
+            height: calc(32px * 0.75);
+            line-height: calc(32px * 0.75);
+            padding: 0 calc(22px * 0.75);
+            font-size: calc(14px * 0.75);
+        }
+        
+        @include from($xl) {
+            height: 32px;
+            line-height: 32px;
+            padding: 0 22px;
+            font-size: 14px;
+        }
+    }
+}

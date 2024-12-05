@@ -1,0 +1,46 @@
+.custom-radio {
+    display: block;
+    height: 16px;
+    line-height: 16px;
+
+    &__input {
+        display: none;
+    }
+
+    &__label {
+        position: relative;
+        font-size: 14px;
+        padding-left: 32px;
+
+        &::before, &::after {
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &::before {
+            width: 14px;
+            height: 14px;
+            border: 1px solid $beige;
+        }
+
+        &::after {
+            width: 8px;
+            height: 8px;
+            background: $dark;
+            top: 4px;
+            left: 4px;
+            opacity: 0;
+        }
+    }
+
+    &__input:checked + &__label::before {
+        border-color: $dark;
+    }
+
+    &__input:checked + &__label::after {
+        opacity: 1;
+    }
+}
