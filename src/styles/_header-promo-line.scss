@@ -1,0 +1,16 @@
+.header-promo-line {
+    text-align: center;
+    font-weight: bold;
+    
+    @include to($sm) {
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    @include from($sm) {
+        font-size: 14px;
+        height: 22px;
+        line-height: 22px;
+    }
+}

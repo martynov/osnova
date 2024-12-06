@@ -10,25 +10,24 @@
         background-color: transparent;
         font-family: $base_font;
 
-        &::before {
-            content: '';
-            display: inline-block;
-            background: url('../images/icon-filter.svg');
-            background-size: 100% 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
+        @include to($sm) {
+            font-size: 0;
+            width: 42px;
+            height: 42px;
+            line-height: 42px;
+            background: url('../images/icon-filter.svg') center no-repeat;
+            background-size: 26px;
         }
 
-        @include to($sm) { /////!!!!!
-            font-size: 14px;
-            height: 34px;
-            line-height: 34px;
-            padding: 0 0 0 54px;
-
+        @include from($sm) {
             &::before {
-                width: 34px;
-                height: 34px;
+                content: '';
+                display: inline-block;
+                background: url('../images/icon-filter.svg');
+                background-size: 100% 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
             }
         }
         

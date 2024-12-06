@@ -21,6 +21,10 @@
 
         @include to($sm) {
             width: calc(50% - 8px / 2);
+
+            &_wide {
+                width: 100%;
+            }
         }
     }
 

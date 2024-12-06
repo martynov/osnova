@@ -84,25 +84,50 @@
         mask-image: url('../images/icon-pen.svg');
         mask-size: 50%;
     }
-    
+
     &_trash::before {
         mask-image: url('../images/icon-trash.svg');
         mask-size: 80%;
     }
-    
+
     &_create::before {
         mask-image: url('../images/icon-create.svg');
         mask-size: 80%;
     }
-    
+
     &_eye-closed::before {
         mask-image: url('../images/icon-eye-closed.svg');
         mask-size: 80%;
     }
-    
+
     &_eye::before {
         mask-image: url('../images/icon-eye.svg');
         mask-size: 80%;
+    }
+
+    &_search::before {
+        mask-image: url('../images/icon-search.svg');
+        mask-size: 60%;
+    }
+
+    &_login::before {
+        mask-image: url('../images/icon-login.svg');
+        mask-size: 60%;
+    }
+
+    &_vk::before {
+        mask-image: url('../images/icon-social-vk.svg');
+        mask-size: 60%;
+    }
+
+    &_instagram::before {
+        mask-image: url('../images/icon-social-instagram.svg');
+        mask-size: 60%;
+    }
+
+    &_telegram::before {
+        mask-image: url('../images/icon-social-telegram.svg');
+        mask-size: 60%;
     }
 
     &__counter {

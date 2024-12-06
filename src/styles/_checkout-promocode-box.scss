@@ -1,5 +1,10 @@
 .checkout-promocode-box {
 
+    &__form {
+        margin: 0;
+        padding: 0;
+    }
+
     &__button {
         display: block;
         width: 100%;
@@ -21,11 +26,12 @@
         }
 
         @include to($sm) {
-            font-size: 14px;
-            height: 24px;
-            line-height: 24px;
-            padding: 0;
-            text-align: left;
+            // font-size: 14px;
+            // height: 24px;
+            // line-height: 24px;
+            // padding: 0;
+            // text-align: left;
+            display: none;
         }
         
         @include between($sm, $xl) {
@@ -42,6 +48,43 @@
             line-height: 24px;
             padding: 0 24px;
             text-align: center;
+        }
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        outline: none;
+        border: 1px solid $beige;
+        border-radius: 0;
+        appearance: none;
+        text-transform: uppercase;
+        font-family: $base_font;
+        box-sizing: border-box;
+
+        @include to($sm) { /////!!!!!
+            height: 50px;
+            line-height: 50px;
+            padding: 0 22px;
+            font-size: 14px;
+        }
+
+        @include from($sm) { 
+            display: none; /////!!!!!
+        }
+        
+        @include between($sm, $xl) {
+            height: calc(36px * 0.75);
+            line-height: calc(36px * 0.75);
+            padding: 0 calc(22px * 0.75);
+            font-size: calc(14px * 0.75);
+        }
+        
+        @include from($xl) {
+            height: 36px;
+            line-height: 36px;
+            padding: 0 22px;
+            font-size: 14px;
         }
     }
 }

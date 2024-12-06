@@ -302,6 +302,7 @@
     &__button-wrapper {
         @include to($sm) {
             margin-top: 16px;
+            padding: 0 8px;
         }
 
         @include from($sm) {
@@ -346,6 +347,23 @@
     @include from($sm) {
         &:hover &__show-on-hover {
             max-height: 250px;
+        }
+    }
+}
+
+// Костыль!
+
+.products-list__item.products-list__item_wide .product-card {
+    @include to($sm) {
+        &__row {
+            margin-right: -8px;
+            display: flex;
+        }
+
+        &__button-wrapper {
+            margin-top: 0;
+            width: 40%;
+            margin-left: auto;
         }
     }
 }

@@ -121,6 +121,12 @@
         &_social-links {
             margin-left: auto;
             text-align: right;
+
+            @include to($sm) {
+                float: right;
+                margin-top: -40px;
+                margin-right: -10px;
+            }
         }
     }
 

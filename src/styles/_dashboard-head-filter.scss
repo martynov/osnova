@@ -1,18 +1,17 @@
 .dashboard-head-filter {
-    border: 1px solid $beige;
-    padding: 16px;
-
     &__row {
         display: flex;
         align-items: center;
+
+        @include from($sm) {
+            border: 1px solid $beige;
+            padding: 16px;
+        }
     }
 
     &__column {
 
         & + & {
-            @include to($sm) { /////!!!!!
-                margin-left: 36px;
-            }
 
             @include between($sm, $xl) {
                 margin-left: calc(36px * 0.75);
@@ -24,19 +23,58 @@
         }
 
         &_subtitle {
-            padding: 0 24px;
+
+            @include to($sm) {
+                margin-right: 12px;
+                margin-left: auto;
+                order: 2;
+            }
+
+            @include from($sm) {
+                padding: 0 24px;
+            }
         }
         
         &_search {
-            margin-right: auto;
+            @include to($sm) {
+                display: none;
+            }
+
+            @include from($sm) {
+                margin-right: auto;
+            }
+        }
+
+        &_search-mobile {
+            @include to($sm) {
+                margin-right: auto;
+                order: 3;
+            }
+
+            @include from($sm) {
+                display: none;
+            }
         }
 
         &_order-by {
-            
+            @include to($sm) {
+                order: 1;
+            }
         }
 
         &_filter {
-            
+            @include to($sm) {
+                order: 4;
+            }
+        }
+    }
+
+    &__subtitle {
+        @include to($sm) {
+            padding: 0 14px;
+            height: 32px;
+            line-height: 32px;
+            border: 1px solid $dark;
         }
     }
 
@@ -71,4 +109,17 @@
             font-size: 14px;
         }
     }
+
+    &__button {
+        display: block;
+        width: 34px;
+        height: 34px;
+        border: 1px solid $dark;
+
+        &_search {
+            background: url(../images/icon-search.svg) center no-repeat;
+            background-size: 20px;
+        }
+    }
+
 }

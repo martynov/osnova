@@ -10,6 +10,12 @@
 то этот блок должен иметь дополнительный класс-модификатор
 .products-list_wide (товары в три колонки).
 
+---
+
+В мобильных макетах есть отображение некоторых плиток на полную
+ширину окна. Для таких плиток нужно добавить класс
+.products-list__item_wide к классу .products-list__item.
+
 -->
 
 <div class="products-list products-list_wide">
@@ -19,7 +25,7 @@
     <div class="products-list__item">
         <!--=include product-card.html -->
     </div>
-    <div class="products-list__item">
+    <div class="products-list__item products-list__item_wide">
         <!--=include product-card.html -->
     </div>
     <div class="products-list__item">

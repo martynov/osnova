@@ -1,0 +1,42 @@
+.social-links {
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+    }
+
+    &__icon {
+        width: 60px;
+        height: 60px;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background: $dark;
+
+        &:hover {
+            background-color: $blue;
+        }
+        
+        &_telegram {
+            mask-image: url(../images/icon-social-telegram.svg);
+            mask-size: 40%;
+        }
+
+        &_vk {
+            mask-image: url(../images/icon-social-vk.svg);
+            mask-size: 50%;
+        }
+    
+        &_instagram {
+            mask-image: url(../images/icon-social-instagram.svg);
+            mask-size: 40%;
+        }
+    }
+}

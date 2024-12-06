@@ -1,0 +1,26 @@
+.order-by {
+
+    &__label {
+        display: block;
+
+        @include to($sm) {
+            &::before {
+                content: '';
+                display: block;
+                width: 42px;
+                height: 42px;
+                background: url(../images/icon-sort-asc.svg) center no-repeat;
+                background-size: 20px;
+            }
+        }
+    }
+
+    &__select {
+        @include to($sm) {
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+    }
+}

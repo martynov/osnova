@@ -23,9 +23,10 @@
         justify-content: space-between;
         align-content: center;
 
-        @include to($sm) { /////!!!!!
-            margin-top: 28px;
-            margin-bottom: 47px;
+        @include to($sm) {
+            margin: 0 -10px;
+            margin-top: 20px;
+            margin-bottom: 16px;
         }
         
         @include between($sm, $xl) {
@@ -40,10 +41,6 @@
     }
 
     &__order-by {
-        @include to($sm) { /////!!!!!
-            width: 180px;
-        }
-        
         @include between($sm, $xl) {
             width: calc(180px * 0.75);
         }

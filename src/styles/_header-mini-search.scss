@@ -14,18 +14,8 @@
         font-family: $base_font;
         box-sizing: border-box;
 
-        @include to($sm) { /////!!!!!
-            height: 32px;
-            line-height: 32px;
-            padding: 0 22px;
-            font-size: 14px;
-        }
-        
-        @include between($sm, $xl) {
-            height: calc(32px * 0.75);
-            line-height: calc(32px * 0.75);
-            padding: 0 calc(22px * 0.75);
-            font-size: calc(14px * 0.75);
+        @include to($xl) {
+            display: none;
         }
         
         @include from($xl) {
@@ -33,6 +23,16 @@
             line-height: 32px;
             padding: 0 22px;
             font-size: 14px;
+        }
+    }
+
+    &__button {
+        @include to($xl) {
+            display: block;
+        }
+        
+        @include from($xl) {
+            display: none;
         }
     }
 }
