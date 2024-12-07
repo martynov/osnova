@@ -10,9 +10,9 @@
         }
     
         &__column {
-            width: 50%;
+            width: calc(50% - 38px / 2);
             flex-grow: 1;
-            flex-shrink: 1;
+            flex-shrink: 0;
     
             & + & {
                 margin-left: 38px;

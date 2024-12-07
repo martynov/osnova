@@ -1,4 +1,5 @@
 //=include ../../node_modules/swiper/swiper-bundle.min.js
+//=include '../../node_modules/inputmask/dist/inputmask.min.js'
 
 window.addEventListener('DOMContentLoaded', function () {
     
@@ -17,6 +18,17 @@ window.addEventListener('DOMContentLoaded', function () {
     } else if (1600 < window.innerWidth) {
         this.window.template = 'xxl'
     }
+
+    // phone masks
+    let im = new Inputmask({
+        mask: "+7 999 999-99-99",
+        placeholder: "+7 ___ ___-__-__",
+        showMaskOnHover: false
+    });
+
+    document.querySelectorAll('.js-phone-mask').forEach((input) => {
+        im.mask(input)
+    })
 
     // fix product card heights
     document.querySelectorAll('.products-list__item').forEach(function (card) {
@@ -306,5 +318,34 @@ window.addEventListener('DOMContentLoaded', function () {
             });
         // }
     });
+
+    // product page size modal checker
+
+    if (document.querySelector('.js-product-page-size-modal') && document.querySelector('.js-product-checked-size-input') && document.querySelectorAll('.js-product-checked-size')) {
+        let toggler = document.querySelectorAll('.js-product-size-modal-toggler');
+        let modal = document.querySelector('.js-product-page-size-modal');
+        let input = document.querySelector('.js-product-checked-size-input');
+        let variants = document.querySelectorAll('.js-product-size-variant');
+        let value = document.querySelectorAll('.js-product-size-value');
+
+        toggler.forEach((togglerButton) => {
+            togglerButton.addEventListener('click', () => {
+                modal.classList.toggle('product-page-size-modal_active')
+            })
+        })
+
+        variants.forEach((variant) => {
+            variant.addEventListener('click', () => {
+                if (!variant.classList.contains('product-page-size-modal__item_disabled')) {
+                    input.value = variant.getAttribute('data-value');
+                    value.forEach((val) => {
+                        val.innerText = variant.innerText
+                    })
+    
+                    modal.classList.remove('product-page-size-modal_active')
+                }
+            })
+        })
+    }
 
 });

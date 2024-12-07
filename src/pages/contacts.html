@@ -31,34 +31,28 @@
 
         <!--=include ../components/breadcrumbs.html -->
 
-        <section class="page page_product product-page">
+        <section class="page page_dashboard contacts-page">
             <div class="page__wrapper wrapper">
-                <div class="product-page__row">
-                    <div class="product-page__column product-page__column_gallery">
-                        <div class="product-page__gallery">
-                            <!--=include ../components/product/gallery.html -->
+                <div class="contacts-page__header">
+                    <h1 class="contacts-page__title">Контакты</h1>
+                </div>
+                <div class="contacts-page__row">
+                    <div class="contacts-page__section contacts-page__section_content">
+                        <!--=include ../components/contacts/content.html -->
+                    </div>
+                    <div class="contacts-page__section contacts-page__section_map">
+                        <div class="contacts-page__map">
+                            <iframe class="contacts-page__iframe" src="https://yandex.ru/map-widget/v1/?ll=30.385888%2C59.948356&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQ0OTg0ORJO0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KjQv9Cw0LvQtdGA0L3QsNGPINGD0LvQuNGG0LAsIDUxIgoNNxPzQRUry29C&sctx=ZAAAAAgAEAAaKAoSCUVnmUUoYEZAEbTIdr6fZEhAEhIJWaMeotEd0j8R1q2ek943wD8iBgABAgMEBSgKOABAx1VIAWoCcnWdAc3MzD2gAQCoAQC9ATFvUMfCAQYAAAAAAACCAhXRiNC%2F0LDQu9C10YDQvdCw0Y8gNTGKAgCSAgCaAgxkZXNrdG9wLW1hcHM%3D&sll=30.390973%2C59.950239&sspn=0.036824%2C0.016310&text=%D1%88%D0%BF%D0%B0%D0%BB%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%2051&z=17.67" frameborder="1" allowfullscreen="true"></iframe>
                         </div>
                     </div>
-                    <div class="product-page__column product-page__column_description">
-                        <div class="product-page__description">
-                            <!--=include ../components/product/description.html -->
-                        </div>
+                    <div class="contacts-page__section contacts-page__section_aside">
+                        <!--=include ../components/contacts/aside.html -->
                     </div>
-                </div>
-                <div class="product-page__sticky-purchase">
-                    <!--=include ../components/product/sticky-purchase.html -->
-                </div>
-                <div class="product-page__size-modal">
-                    <!--=include ../components/product/mobile-size-modal.html -->
-                </div>
-                <div class="product-page__similar-row">
-                    <!--=include ../components/catalog/products-slider-widget.html -->
-                </div>
-                <div class="product-page__similar-row">
-                    <!--=include ../components/catalog/products-slider-widget.html -->
                 </div>
             </div>
         </section>
+
+        <!--=include ../components/catalog/filter-overlay.html -->
 
         <!--=include ../components/footer/footer.html -->
     </body>

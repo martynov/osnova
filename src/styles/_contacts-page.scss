@@ -1,0 +1,147 @@
+.contacts-page {
+    @include to($sm) {
+        font-size: 16px;
+    }
+
+    @include between($sm, $xl) {
+        font-size: calc(16px * 0.75);
+    }
+
+    @include from($xl) {
+        font-size: 16px;
+    }
+
+    &__title {
+        font-weight: bold;
+        
+        @include to($sm) {
+            font-size: 18px;
+            margin-top: 28px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(36 * 0.75);
+            margin-bottom: calc(52 * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 36px;
+            margin-bottom: 52px;
+        }
+    }
+
+    &__row {
+        @include from($sm) {
+            &::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+    }
+
+    &__section {
+
+        &_content {
+            @include from($sm) {
+                width: calc(300 / 1380 * 100%);
+                float: left;
+                margin-bottom: 46px;
+            }
+        }
+
+        &_map {
+            @include to($sm) {
+                margin: 50px -20px;
+            }
+
+            @include from($sm) {
+                width: calc(1030 / 1380 * 100%);
+                float: right;
+            }
+        }
+        
+        &_aside {
+            @include from($sm) {
+                width: calc(300 / 1380 * 100%);
+                float: left;
+                clear: left;
+            }
+        }
+    }
+
+    &__main {
+        width: 100%;
+
+        &_narrow {
+            max-width: 700px;
+        }
+    }
+
+    &__subtitle {
+        color: #666666;
+
+        &:first-child {
+            margin-top: 0 !important;
+        }
+
+        @include to($sm) {
+            margin: 24px 0 16px;
+        }
+
+        @include between($sm, $xl) {
+            margin: calc(24px * 0.75) 0 calc(16px * 0.75);
+        }
+
+        @include from($xl) {
+            margin: 24px 0 16px;
+        }
+    }
+
+    &__map {
+        position: relative;
+        background-color: #f0f0f0;
+
+        @include to($sm) {
+            height: 280px;
+        }
+
+        @include between($sm, $xl) {
+            height: calc(580px * 0.75);
+        }
+
+        @include from($xl) {
+            height: 580px;
+        }
+    }
+
+    &__iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-width: 0;
+    }
+
+    &__social {
+        margin: 16px -10px -10px;
+    }
+
+    &__contact-box {
+        margin: 16px 0;
+    }
+
+    &__contact-value {
+        font-weight: bold;
+    }
+
+    &__contact-description {
+        color: #666666;
+    }
+
+}

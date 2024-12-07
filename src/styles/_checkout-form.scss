@@ -65,6 +65,10 @@
 
     &__aside-button {
         float: right;
+
+        @include from($sm) {
+            display: none;
+        }
     }
 
     &__button {

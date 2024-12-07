@@ -57,6 +57,7 @@
 @import 'product-gallery';
 @import 'order-by';
 @import 'product-sticky-purchase-buttons';
+@import 'product-page-size-modal';
 
 // filter modal and its components
 @import 'filter-button';
@@ -109,6 +110,9 @@
 // about pages
 @import 'about-page';
 @import 'about-us-page';
+
+// contacts page
+@import 'contacts-page';
 
 // other elements
 @import 'aside-menu';

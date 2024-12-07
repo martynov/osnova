@@ -1,7 +1,7 @@
 <div class="product-sticky-purchase-buttons">
     <div class="product-sticky-purchase-buttons__row">
         <div class="product-sticky-purchase-buttons__column product-sticky-purchase-buttons__column_size">
-            <div class="product-sticky-purchase-buttons__size">37</div>
+            <div class="product-sticky-purchase-buttons__size js-product-size-modal-toggler js-product-size-value">37</div>
         </div>
         <div class="product-sticky-purchase-buttons__column product-sticky-purchase-buttons__column_price">
             <div class="product-sticky-purchase-buttons__prices-wrapper">
@@ -13,7 +13,10 @@
     <div class="product-sticky-purchase-buttons__row">
         <div class="product-sticky-purchase-buttons__column product-sticky-purchase-buttons__column_basket">
             <div class="product-sticky-purchase-buttons__basket">
-                <button class="product-description__button button button_beige">В корзину</button>
+                <form class="product-sticky-purchase-buttons__basket-form" method="post">
+                    <input type="hidden" class="js-product-checked-size-input" name="size" />
+                    <button type="submit" class="product-description__button button button_beige">В корзину</button>
+                </form>
             </div>
         </div>
         <div class="product-sticky-purchase-buttons__column product-sticky-purchase-buttons__column_checkout">

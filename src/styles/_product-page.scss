@@ -94,4 +94,10 @@
             display: none;
         }
     }
+
+    &__size-modal {
+        @include from($sm) {
+            display: none;
+        }
+    }
 }

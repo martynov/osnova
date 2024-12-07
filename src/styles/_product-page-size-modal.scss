@@ -1,0 +1,112 @@
+.product-page-size-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    pointer-events: none;
+    overflow: hidden;
+
+    &_active {
+        pointer-events: all;
+    }
+
+    &__underlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: rgba(#444, 0.3);
+        opacity: 0;
+        transition: all 0.2s ease;
+    }
+
+    &_active &__underlay {
+        opacity: 1;
+    }
+
+    &__modal {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        background: $white;
+        transform: translateY(200%);
+        transition: all 0.4s ease;
+    }
+    
+    &_active &__modal {
+        transform: translateY(0);
+    }
+
+    &__inner {
+
+    }
+
+    &__header {
+        display: flex;
+        padding: 34px 25px 25px 52px;
+    }
+
+    &__sizes-table-link {
+        position: absolute;
+        display: block;
+        right: 12px;
+        bottom: 100%;
+        margin-bottom: 26px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 20px;
+        background: white;
+        padding: 0 20px;
+        text-decoration: none;
+        color: $dark;
+        font-size: 14px;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            background: url(../images/icon-dimensions.svg) center no-repeat;
+            background-size: 100%;
+            width: 24px;
+            height: 14px;
+            vertical-align: bottom;
+            margin-bottom: 14px;
+            margin-right: 12px;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    &__size-toggler {
+        margin-left: 35px;
+    }
+
+    &__body {
+
+    }
+
+    &__list {
+
+    }
+
+    &__item {
+        height: 46px;
+        line-height: 46px;
+        border-top: 1px solid $beige;
+        font-size: 16px;
+        color: #313131;
+        padding: 0 25px 0 52px;
+        
+        &_disabled {
+            color: rgba(#313131, 0.4);
+        }
+    }
+}

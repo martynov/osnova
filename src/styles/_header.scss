@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    z-index: 6;
+    z-index: 50;
     
     @include to($sm) {
         margin-bottom: 16px;
