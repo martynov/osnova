@@ -32,5 +32,10 @@ window.addEventListener('DOMContentLoaded', function () {
         gallery.addEventListener('mouseleave', () => {
             swiper.slideTo(0)
         });
+
+        // костыль
+        $(document).ready(function(){
+            swiper.update()
+        })
     });
 });

@@ -1,7 +1,13 @@
 .dashboard-page {
 
     &__aside-button-wrapper {
-        float: right;
+        @include to($sm) {
+            float: right;
+        }
+
+        @include from($sm) {
+            display: none;
+        }
     }
 
     &__aside-button {
@@ -156,8 +162,8 @@
     }
 
     &__products-set-heading {
-        @include to($sm) { /////!!!!!
-            margin-bottom: 47px;
+        @include to($sm) {
+            margin-bottom: 32px;
         }
         
         @include between($sm, $xl) {

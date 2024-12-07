@@ -4,8 +4,6 @@
 //=include '../../node_modules/inputmask/dist/inputmask.min.js'
 
 //=include './window-template.js'
-//=include './product-card-galleries.js'
-//=include './products-slider.js'
 //=include './field-masks.js'
 //=include './product-card-height-fix.js'
 //=include './product-page-gallery.js'
@@ -17,6 +15,10 @@
 //=include './product-page-mobile-modal-size-checker.js'
 //=include './filter-price-range.js'
 //=include './checkout-check-all.js'
+//=include './open-orders-mobile.js'
+//=include './faq-containers.js'
+//=include './product-card-galleries.js'
+//=include './products-slider.js'
 
 window.addEventListener('DOMContentLoaded', function () {
     //

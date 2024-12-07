@@ -1,6 +1,6 @@
 .order-preview-row {
 
-    @include to($sm) { /////!!!!!
+    @include to($sm) {
         font-size: 14px;
     }
     
@@ -13,9 +13,36 @@
     }
 
     &__row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include to($sm) {
+            position: relative;
+            margin-right: 50px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 10px;
+                right: -35px;
+                margin-top: -1px;
+                width: 8px;
+                height: 8px;
+                border-bottom: 1px solid $dark;
+                border-left: 1px solid $dark;
+                transition: all 0.2s ease;
+                transform: translateY(-55%) rotate(-45deg);
+            }
+        }
+
+        @include from($sm) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    
+    @include to($sm) {
+        &_opened &__row::after {
+            transform: translateY(15%) rotate(135deg);
+        }
     }
 
     &__column {
@@ -32,7 +59,15 @@
     &__head-line {
         position: relative;
         padding-left: 14px;
-        margin-bottom: 8px;
+
+        @include to($sm) {
+            margin-bottom: 12px;
+            margin-right: -50px;
+        }
+        
+        @include from($sm) {
+            margin-bottom: 8px;
+        }
     }
 
     &__title {
@@ -75,7 +110,13 @@
     }
 
     &__info-line {
-        margin-bottom: 8px;
+        @include to($sm) {
+            margin-bottom: 12px;
+        }
+        
+        @include from($sm) {
+            margin-bottom: 8px;
+        }
 
         > span {
             text-transform: uppercase;
@@ -83,9 +124,27 @@
         }
     }
 
+    &__date {
+        @include to($sm) {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        @include from($sm) {
+            display: inline;
+        }
+    }
+
     &__previews-list {
-        display: flex;
-        gap: 5px;
+        @include to($sm) {
+            display: none;
+        }
+
+        @include from($sm) {
+            display: flex;
+            gap: 5px;
+        }
     }
 
     &__photo {
@@ -113,15 +172,72 @@
     }
 
     &__products-counter {
-        font-size: 12px;
-        margin-top: 14px;
         text-align: right;
+
+        @include to($sm) {
+            position: absolute;
+            right: 0;
+            top: 64px;
+            font-size: 14px;
+        }
+
+        @include from($sm) {
+            font-size: 12px;
+            margin-top: 14px;
+        }
     }
 
     &__price {
         font-size: 16px;
         font-weight: 600;
-        margin-bottom: 8px;
+
+        @include to($sm) {
+            position: absolute;
+            right: 0;
+            top: 32px;
+        }
+
+        @include from($sm) {
+            margin-bottom: 8px;
+        }
     }
 
+    &__footer {
+        @include to($sm) {
+            margin-right: -50px;
+        }
+
+        @include from($sm) {
+
+        }
+    }
+
+    &__products-list {
+        @include to($sm) {
+            display: none;
+            margin-top: 32px;
+        }
+        
+        @include from($sm) {
+            display: none;
+        }
+    }
+
+    @include to($sm) {
+        &_opened &__products-list {
+            display: block;
+        }
+    }
+
+    &__product-item {
+        @include to($sm) {
+            & + & {
+                margin-top: 50px;
+            }
+        }
+        
+        @include from($sm) {
+            display: none;
+        }
+    }
 }

@@ -1,10 +1,18 @@
 .orders-list {
 
     &__item {
-        padding: 24px 0;
 
         & + & {
             border-top: 1px solid $beige;
+        }
+
+        @include to($sm) {
+            padding: 16px 20px;
+            margin: 0 -20px;
+        }
+
+        @include from($sm) {
+            padding: 24px 0;
         }
     }
 }
