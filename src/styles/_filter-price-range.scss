@@ -1,0 +1,21 @@
+.filter-price-range {
+    
+    &.ui-slider {
+        border-width: 0;
+        height: 1px;
+        background: $beige;
+
+        .ui-slider-range {
+            background-color: $dark;
+        }
+
+        .ui-slider-handle {
+            width: 10px;
+            height: 10px;
+            background-color: $dark;
+            border-radius: 50%;
+            border-width: 0;
+            top: -5px;
+        }
+    }
+}

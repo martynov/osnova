@@ -34,4 +34,23 @@
             }
         }
     }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+    }
+
+    &__button {
+        display: block;
+        font-family: $base_font;
+        border: none;
+        outline: none;
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        background: transparent;
+        cursor: pointer;
+    }
 }

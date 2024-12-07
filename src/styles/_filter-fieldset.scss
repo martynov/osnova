@@ -21,6 +21,11 @@
 
     }
 
+    &__price-range {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
     &__title + &__checkbox-list {
         @include to($sm) { /////!!!!!
             margin-top: 16px;

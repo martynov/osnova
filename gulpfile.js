@@ -26,6 +26,7 @@ function browsersync () {
 
 function styles () {
     return src('./src/styles/style.scss')
+        .pipe(includeFiles())
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({ grid: true }))
         .pipe(gcssmq())

@@ -17,6 +17,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglifycss": "^1.1.0",
     "inputmask": "^5.0.9",
+    "jquery": "^3.7.1",
+    "jquery-ui": "^1.14.1",
     "node-sass": "^9.0.0",
     "sass": "^1.79.5",
     "swiper": "^6.8.4"
