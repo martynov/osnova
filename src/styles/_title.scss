@@ -1,0 +1,21 @@
+.title {
+    font-weight: bold;
+
+    @include to($sm) {
+        font-size: 31px;
+    }
+    
+    @include between($sm, $xl) {
+        font-size: 26px;
+    }
+    
+    @include from($xl) {
+        font-size: 36px;
+    }
+
+    &_smaller {
+        @include from($sm) {
+            font-size: 26px;
+        }
+    }
+}

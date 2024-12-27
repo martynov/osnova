@@ -1,0 +1,229 @@
+.sign-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    pointer-events: none;
+    overflow: hidden;
+
+    &_active {
+        pointer-events: all;
+    }
+
+    &__underlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: rgba(#444, 0.3);
+        opacity: 0;
+        transition: all 0.2s ease;
+    }
+
+    &_active &__underlay {
+        opacity: 1;
+    }
+
+    &__head-bar {
+        display: flex;
+        padding-right: 80px;
+        border-bottom: 1px solid $beige;
+    }
+    
+    &__subtitle {
+        flex-grow: 1;
+        border-right: 1px solid $beige;
+        height: 78px;
+        line-height: 78px;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding-left: 30px;
+    }
+    
+    &__tab-subtitle {
+        padding: 0;
+        text-align: center;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+    
+        &:hover {
+            color: $blue;
+            border-bottom-color: $blue;
+        }
+    }
+
+    &__tab-subtitle_active {
+        border-bottom-color: $dark;
+    }
+
+    &__modal {
+        position: absolute;
+        z-index: 2;
+        background: $white;
+        overflow-y: auto;
+        opacity: 0;
+        transition: all 0.2s ease;
+
+        @include to($sm) {
+            max-width: 345px;
+            width: 95%;
+            height: auto;
+            max-height: 100vh;
+            top: 0;
+            right: 0;
+            transform: translateX(100%);
+        }
+
+        @include from($sm) {
+            height: auto;
+            max-height: 100vh;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%) translateY(-100%);
+        }
+        
+        @include between($sm, $xl) {
+            width: calc(365px * 0.75);
+        }
+        
+        @include from($xl) {
+            width: 365px;
+        }
+    }
+    
+    &_active &__modal {
+        opacity: 1;
+
+        @include to($sm) {
+            transform: translateX(0);
+        }
+
+        @include from($sm) {
+            transform: translateX(-50%) translateY(0%);
+        }
+    }
+
+    &__inner {
+        @include to($sm) { /////!!!!!
+            padding: 25px;
+        }
+        
+        @include between($sm, $xl) {
+            padding: calc(25px * 0.75);
+        }
+        
+        @include from($xl) {
+            padding: 25px;
+        }
+    }
+
+    &__form {
+        &_sign {
+            display: none;
+        }
+
+        &_visible {
+            display: block;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        
+        &:hover {
+            opacity: 0.8;
+        }
+        
+        &::before, &::after {
+            content: '';
+            display: block;
+            height: 2px;
+            margin-top: -1px;
+            background-color: $dark;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 16px;
+        }
+
+        &::before {
+            transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+        }
+
+        &::after {
+            transform: translate3d(-50%, -50%, 0) rotate(45deg);
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 8px;
+
+        & + & {
+            @include to($sm) { /////!!!!!
+                margin-top: 20px;
+            }
+            
+            @include between($sm, $xl) {
+                margin-top: calc(20px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__fieldset {
+        flex-grow: 1;
+        margin: 0;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__footer {
+        
+    }
+
+    &__footer {
+        margin-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__rule {
+        font-size: 14px;
+        text-align: center;
+
+        @include to($sm) { /////!!!!!
+            margin-top: 34px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(34px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 34px;
+        }
+    }
+
+    &__comment {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    &__button {
+        width: 100%;
+    }
+}

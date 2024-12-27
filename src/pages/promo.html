@@ -31,22 +31,39 @@
 
         <!--=include ../components/breadcrumbs.html -->
 
-        <section class="page page_dashboard dashboard-page">
-            <div class="page__wrapper wrapper">
-                <div class="dashboard-page__row">
-                    <div class="dashboard-page__column dashboard-page__column_aside">
-                        <!--=include ../components/dashboard/aside.html -->
+        <section class="page page_catalog catalog-page">
+            <div class="catalog-page__header">
+                <div class="page__wrapper wrapper">
+                    <div class="catalog-page__title title">Летняя распродажа - Скидки до 50%!</div>
+                    <div class="catalog-page__description">
+                        <p>Откройте лето вместе с OSNOVA! Наслаждайтесь стильной и качественной брендовой одеждой по невероятным ценам. В период с 1 июля по 31 июля получайте скидки до 50% на всю летнюю коллекцию. Поторопитесь, количество акционных товаров ограничено!</p>
+                        <p><b>Условия акции:</b></p>
+                        <ul>
+                            <li>Скидка до 50% на выбранные модели летней коллекции.</li>
+                            <li>Акция действует с 1 июля по 31 августа.</li>
+                            <li>Товары, участвующие в акции, помечены специальным значком.</li>
+                            <li>Скидки не суммируются с другими акциями и промокодами.</li>
+                        </ul>
                     </div>
-                    <div class="dashboard-page__column dashboard-page__column_main">
-                        <main class="dashboard-page__main dashboard-page__main_narrow">
-                            <div class="dashboard-page__aside-button-wrapper">
-                                <a href="#" class="dashboard-page__aside-button dashboard-page__aside-button_auth">Выйти</a>
-                            </div>
-                            <div class="dashboard-page__title">Мои заказы</div>
-                            <div class="dashboard-page__orders-list">
-                                <!--=include ../components/dashboard/orders-list.html -->
-                            </div>
-                        </main>
+                </div>
+            </div>
+            <div class="catalog-page__body">
+                <div class="page__wrapper wrapper">
+                    <div class="catalog-page__settings-row">
+                        <div class="catalog-page__order-by">
+                            <!--=include ../components/catalog/order-by.html -->
+                        </div>
+                        <div class="catalog-page__filter">
+                            <!--=include ../components/catalog/filter-button.html -->
+                        </div>
+                    </div>
+                    <div class="catalog-page__products-list">
+                        <!--=include ../components/catalog/products-list.html -->
+                    </div>
+                    <div class="catalog-page__footer">
+                        <div class="catalog-page__pagionation">
+                            <!--=include ../components/pagionation.html -->
+                        </div>
                     </div>
                 </div>
             </div>

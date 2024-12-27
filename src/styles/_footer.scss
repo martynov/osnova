@@ -1,29 +1,46 @@
 .footer {
     position: relative;
+    margin-top: auto;
+
+    &::before {
+        content: '';
+        display: block;
+    }
     
     @include to($sm) { /////!!!!!
         padding: calc(36px + 22px) 0 28px;
-        margin-top: 110px;
+
+        &::before, &::after {
+            margin-top: 110px;
+        }
     }
     
     @include between($sm, $xl) {
         padding: calc((36px + 22px) * 0.75) 0 calc(28px * 0.75);
-        margin-top: calc(110px * 0.75);
+
+        &::before, &::after {
+            margin-top: calc(110px * 0.75);
+        }
     }
     
     @include from($xl) {
         padding: calc(36px + 22px) 0 28px;
-        margin-top: 110px;
+
+        &::before, &::after {
+            margin-top: 110px;
+        }
     }
 
-    &::before {
+    &::after {
         content: '';
         display: block;
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
-        background: url('../images/osnova_pattern.svg') center repeat-x, url('../images/metal_pattern.jpg') repeat-x;
+        background: url('../images/osnova_pattern.svg') center repeat-x, linear-gradient(90deg, #d0d0d0 0%, #e8e8e8 25%, #c0c0c0 50%, #e8e8e8 75%, #d0d0d0 100%) repeat-x;
+        background-size: auto, 100px;
+
 
         @include to($sm) { /////!!!!!
             height: 22px;

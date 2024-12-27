@@ -1,4 +1,18 @@
 .checkout-aside {
+
+    &__stage {
+        @include to($sm) {
+            display: none;
+        }
+
+        @include between($sm, $xl) {
+            margin-bottom: 48px;
+        }
+        
+        @include from($xl) {
+            margin-bottom: 75px;
+        }
+    }
     
     &__box {
         

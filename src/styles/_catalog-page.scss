@@ -1,5 +1,30 @@
 .catalog-page {
 
+    &__header {
+        border-bottom: 1px solid $beige;
+
+        @include to($sm) { /////!!!!!
+            padding-bottom: 50px;
+            margin-bottom: 42px;
+        }
+        
+        @include between($sm, $xl) {
+            padding-bottom: calc(50px * 0.75);
+            margin-bottom: calc(42px * 0.75);
+        }
+        
+        @include from($xl) {
+            padding-bottom: 50px;
+            margin-bottom: 42px;
+        }
+    }
+
+    &__description {
+        @include from($lg) {
+            width: 75%;
+        }
+    }
+
     &__cover {
         background-color: $lightgray;
         background-position: center;
@@ -41,13 +66,7 @@
     }
 
     &__order-by {
-        @include between($sm, $xl) {
-            width: calc(180px * 0.75);
-        }
-        
-        @include from($xl) {
-            width: 180px;
-        }
+        width: 180px;
     }
 
     &__footer {

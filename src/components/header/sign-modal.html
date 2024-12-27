@@ -1,0 +1,110 @@
+<div class="sign-modal sign-modal_sign">
+    <div class="sign-modal__underlay js-sign-modal-close"></div>
+    <div class="sign-modal__modal">
+        <div class="sign-modal__head-bar">
+            <div class="sign-modal__subtitle sign-modal__tab-subtitle sign-modal__tab-subtitle_sign-in">Вход</div>
+            <div class="sign-modal__subtitle sign-modal__tab-subtitle sign-modal__tab-subtitle_sign-up">Регистрация</div>
+            <div class="sign-modal__close js-sign-modal-close"></div>
+        </div>
+        <div class="sign-modal__inner">
+            <!-- Форма входа -->
+            <form class="sign-modal__form sign-modal__form_sign sign-modal__form_sign-in">
+                <div class="sign-modal__row">
+                    <fieldset class="sign-modal__fieldset">
+                        <input class="sign-modal__input input input_large" placeholder="Введите ваш E-mail / Телефон" name="login" type="text" />
+                    </fieldset>
+                </div>
+                <div class="sign-modal__row">
+                    <fieldset class="sign-modal__fieldset">
+                        <input class="sign-modal__input input input_large" placeholder="Пароль" name="city" type="password" />
+                    </fieldset>
+                </div>
+                <div class="sign-modal__row">
+                    <fieldset class="sign-modal__fieldset">
+                        <input value="Забыли пароль?" class="sign-modal__button button button_transparent button_light js-forget-password-modal-button" />
+                    </fieldset>
+                </div>
+                <div class="sign-modal__footer">
+                    <input value="Войти" class="sign-modal__button button button_caps button_dark" />
+                    <div class="sign-modal__rule">
+                        Нажимая на кнопку «Войти», Вы подтверждаете, что ознакомлены с Политикой конфиденциальности
+                    </div>
+                </div>
+            </form>
+            <!-- Форма регистрации -->
+            <form class="sign-modal__form sign-modal__form_sign sign-modal__form_sign-up">
+                <div class="sign-modal__row">
+                    <fieldset class="sign-modal__fieldset">
+                        <input class="sign-modal__input input input_large" placeholder="Ваше имя" name="city" type="text" />
+                    </fieldset>
+                </div>
+                <div class="sign-modal__row">
+                    <fieldset class="sign-modal__fieldset">
+                        <input class="sign-modal__input input input_large" placeholder="Введите ваш email" name="email" type="text" />
+                    </fieldset>
+                </div>
+                <div class="sign-modal__row">
+                    <fieldset class="sign-modal__fieldset">
+                        <input class="sign-modal__input input input_large js-phone-mask" placeholder="Введите ваш телефон" name="phone" type="text" />
+                    </fieldset>
+                </div>
+                <div class="sign-modal__row">
+                    <fieldset class="sign-modal__fieldset">
+                        <div class="password-strong-indicator">
+                            <div class="password-strong-indicator__input">
+                                <input class="sign-modal__input input input_large" placeholder="Пароль" name="password" type="password" />
+                            </div>
+                            <div class="password-strong-indicator__row">
+                                <div class="password-strong-indicator__level"></div>
+                                <div class="password-strong-indicator__level"></div>
+                                <div class="password-strong-indicator__level"></div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="sign-modal__row">
+                    <fieldset class="sign-modal__fieldset">
+                        <input class="sign-modal__input input input_large" placeholder="Повторите пароль" name="city" type="password" />
+                    </fieldset>
+                </div>
+                <div class="sign-modal__footer">
+                    <input value="Зарегистрироваться" class="sign-modal__button button button_caps button_dark" />
+                    <div class="sign-modal__rule">
+                        Нажимая кнопку “Зарегистрироваться”, Вы соглашаетесь с Условиями оферты, Политикой конфиденциальности и становитесь участником Программы лояльности
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="sign-modal sign-modal_forget-password">
+    <div class="sign-modal__underlay js-sign-modal-close"></div>
+    <div class="sign-modal__modal">
+        <div class="sign-modal__head-bar">
+            <div class="sign-modal__subtitle">Восстановление пароля</div>
+            <div class="sign-modal__close js-sign-modal-close"></div>
+        </div>
+        <div class="sign-modal__inner">
+            <!-- Форма входа -->
+            <form class="sign-modal__form">
+                <div class="sign-modal__row">
+                    <fieldset class="sign-modal__fieldset">
+                        <input class="sign-modal__input input input_large" placeholder="Введите ваш E-mail / Телефон" name="login" type="text" />
+                        <div class="sign-modal__comment">
+                            Мы отправим Вам одноразовый код для сброса пароля
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="sign-modal__row">
+                    <fieldset class="sign-modal__fieldset">
+                        <input value="Отправить код повторно" class="sign-modal__button button button_light button_transparent" />
+                    </fieldset>
+                </div>
+                <div class="sign-modal__footer">
+                    <input value="Ввести код" class="sign-modal__button button button_caps button_dark" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

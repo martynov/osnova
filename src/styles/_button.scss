@@ -3,7 +3,6 @@
     border-radius: 0;
     font-weight: 600;
     font-family: $base_font;
-    text-transform: uppercase;
     appearance: none;
     box-sizing: border-box;
     border-style: solid;
@@ -70,5 +69,13 @@
         border-color: transparent;
         color: $dark;
         text-decoration: underline;
+    }
+
+    &_caps {
+        text-transform: uppercase;
+    }
+
+    &_light {
+        font-weight: normal;
     }
 }

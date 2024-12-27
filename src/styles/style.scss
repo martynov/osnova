@@ -22,6 +22,8 @@
 @import 'mobile-header-menu';
 @import 'mobile-header-dropdown';
 @import 'header-promo-line';
+@import 'sign-modal';
+@import 'password-strong-indicator';
 
 
 // footer
@@ -84,6 +86,7 @@
 
 // checkout
 @import 'checkout-aside';
+@import 'checkout-stage';
 @import 'product-preview-row';
 @import 'products-checkout-list';
 @import 'checkout-loyal-program';
@@ -117,7 +120,12 @@
 // contacts page
 @import 'contacts-page';
 
+// search page
+@import 'search-page';
+@import 'search-modal';
+
 // other elements
+@import 'title';
 @import 'aside-menu';
 @import 'hr';
 @import 'heading-row';

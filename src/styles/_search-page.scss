@@ -1,0 +1,38 @@
+.search-page {
+    
+    &__section {
+        & + & {
+            border-top: 1px solid $beige;
+
+            @include to($sm) { /////!!!!!
+                margin-top: 84px;
+            }
+            
+            @include between($sm, $xl) {
+                margin-top: calc(84px * 0.75);
+            }
+            
+            @include from($xl) {
+                margin-top: 84px;
+            }
+        }
+    }
+
+    &__footer {
+        @include to($sm) { /////!!!!!
+            margin-top: 80px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(80px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 80px;
+        }
+    }
+    
+    &__pagination {
+        
+    }
+}

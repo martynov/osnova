@@ -52,5 +52,13 @@
         font-size: 14px;
         background: transparent;
         cursor: pointer;
+
+        &_check-all {
+            margin-right: auto;
+        }
+
+        &_share {
+            margin-right: 24px;
+        }
     }
 }

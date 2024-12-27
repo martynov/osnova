@@ -31,28 +31,47 @@
 
         <!--=include ../components/breadcrumbs.html -->
 
-        <section class="page page_dashboard dashboard-page">
-            <div class="page__wrapper wrapper">
-                <div class="dashboard-page__row">
-                    <div class="dashboard-page__column dashboard-page__column_aside">
-                        <!--=include ../components/dashboard/aside.html -->
+        <section class="page page_search search-page">
+            <div class="search-page__header">
+                <div class="page__wrapper wrapper">
+                    <h1 class="search-page__header title">Найдено по запросу “________”</h1>
+                </div>
+            </div>
+            <div class="search-page__body">
+                <div class="search-page__section">
+                    <div class="page__wrapper wrapper">
+                        <div class="search-page__heading">
+                            <!--=include ../components/heading-row.html -->
+                        </div>
+                        <div class="search-page__content">
+                            <!--=include ../components/catalog/products-list.html -->
+                        </div>
+                        <div class="search-page__footer">
+                            <div class="search-page__pagionation">
+                                <!--=include ../components/pagionation.html -->
+                            </div>
+                        </div>
                     </div>
-                    <div class="dashboard-page__column dashboard-page__column_main">
-                        <main class="dashboard-page__main dashboard-page__main_narrow">
-                            <div class="dashboard-page__aside-button-wrapper">
-                                <a href="#" class="dashboard-page__aside-button dashboard-page__aside-button_auth">Выйти</a>
+                </div>
+                <div class="search-page__section">
+                    <div class="page__wrapper wrapper">
+                        <div class="search-page__heading">
+                            <!--=include ../components/heading-row.html -->
+                        </div>
+                        <div class="search-page__content">
+                            <!--=include ../components/blog/feed.html -->
+                        </div>
+                        <div class="search-page__footer">
+                            <div class="search-page__pagionation">
+                                <!--=include ../components/pagionation.html -->
                             </div>
-                            <div class="dashboard-page__title">Мои заказы</div>
-                            <div class="dashboard-page__orders-list">
-                                <!--=include ../components/dashboard/orders-list.html -->
-                            </div>
-                        </main>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--=include ../components/catalog/filter-overlay.html -->
+        <!--=include ../components/search/filter-overlay.html -->
 
         <!--=include ../components/footer/footer.html -->
     </body>

@@ -1,0 +1,76 @@
+.checkout-stage {
+
+    @include to($sm) { /////!!!!!
+        
+    }
+    
+    @include between($sm, $xl) {
+        
+    }
+    
+    @include from($xl) {
+        
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    &__item {
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: "";
+            display: block;
+            height: 1px;
+            background: $beige;
+
+            @include between($sm, $xl) {
+                width: 23px;
+                margin: 0 6px;
+            }
+            
+            @include from($xl) {
+                width: 30px;
+                margin: 0 12px;
+            }
+        }
+
+        &:first-child::before {
+            display: none;
+        }
+    }
+
+    &__link {
+        color: $beige;
+        text-decoration: none;
+
+        &[href]:hover {
+            color: $blue;
+        }
+
+        &_active {
+            font-weight: bold;
+            color: $dark;
+        }
+
+        @include between($sm, $xl) {
+            font-size: 14px;
+
+            &_active {
+                font-size: 16px;
+            }
+        }
+
+        @include from($xl) {
+            font-size: 16px;
+
+            &_active {
+                font-size: 21px;
+            }
+        }
+    }
+}
