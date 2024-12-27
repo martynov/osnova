@@ -91,7 +91,7 @@
         }
         
         @include between($sm, $xl) {
-            font-size: 12px;
+            font-size: 14px;
             margin: calc(20px * 0.75) 0;
         }
         
@@ -183,12 +183,12 @@
         
         @include between($sm, $xl) {
             margin-top: calc(16px * 0.75);
-            font-size: calc(12px * 0.75);
+            font-size: calc(14px * 0.75);
         }
         
         @include from($xl) {
             margin-top: 16px;
-            font-size: 12px;
+            font-size: 14px;
         }
 
         & > a {

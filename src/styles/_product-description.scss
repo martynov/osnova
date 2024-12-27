@@ -175,15 +175,15 @@
         border-bottom: 1px solid #5c5c5c;
 
         @include to($sm) { /////!!!!!
-            font-size: 12px;
+            font-size: 14px;
         }
         
         @include between($sm, $xl) {
-            font-size: calc(12px * 0.75);
+            font-size: calc(14px * 0.75);
         }
         
         @include from($xl) {
-            font-size: 12px;
+            font-size: 14px;
         }
     }
 
@@ -309,12 +309,12 @@
         }
         
         @include between($sm, $xl) {
-            font-size: calc(12px * 0.75);
+            font-size: calc(14px * 0.75);
             margin: calc(65px * 0.75) 0 calc(65px * 0.75);
         }
         
         @include from($xl) {
-            font-size: 12px;
+            font-size: 14px;
             margin: 65px 0 65px;
         }
     }

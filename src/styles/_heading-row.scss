@@ -56,11 +56,11 @@
         }
         
         @include between($sm, $xl) {
-            font-size: calc(12px * 0.75);
+            font-size: calc(14px * 0.75);
         }
         
         @include from($xl) {
-            font-size: 12px;
+            font-size: 14px;
         }
     }
 
