@@ -1,0 +1,150 @@
+.under-construction {
+    position: relative;
+    min-height: 100vh;
+
+    @include to($sm) {
+        background: url('../images/under-construct-background.jpg') center bottom no-repeat, linear-gradient(to right, #e6e6e6, #dbdbdb);
+        background-size: 150%, 100%;
+    }
+
+    @include from($sm) {
+        background: url('../images/under-construct-background.jpg') center fixed no-repeat;
+        background-size: cover;
+    }
+
+    &__logo {
+        width: 183px;
+        margin-bottom: 50px;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-top: calc(38 / 183 * 100%);
+            background-image: url('../images/logo.svg');
+            background-size: 100% 100%;
+        }
+    }
+    
+    &__content {
+        @include from($sm) {
+            width: 40%;
+        }
+
+        @include to($sm) {
+            padding: 32px 0;
+        }
+    
+        @include between($sm, $xl) {
+            padding: 32px 0;
+        }
+    
+        @include from($xl) {
+            padding: 40px 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        
+        @include to($sm) {
+            font-size: 32px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: 26px;
+        }
+        
+        @include from($xl) {
+            font-size: 32px;
+        }
+    }
+
+    &__description {
+        max-width: 600px;
+        margin-bottom: 40px;
+
+        @include to($sm) {
+            font-size: 14px;
+        }
+        
+        @include from($sm) {
+            font-size: 16px;
+        }
+    }
+
+    &__footer {
+
+    }
+
+    &__links-list {
+        list-style: none;
+        padding: 0;
+        margin: 32px 0;
+        font-size: 14px;
+
+        @include from($sm) {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        @include to($sm) {
+            & + & {
+                margin-top: 16px;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $dark;
+        border-bottom: 1px solid $dark;
+
+        &:hover {
+            color: $blue;
+            border-color: $blue;
+        }
+    }
+
+    
+    &__subtitle {
+        color: #666666;
+
+        &:first-child {
+            margin-top: 0 !important;
+        }
+
+        @include to($sm) {
+            margin: 24px 0 16px;
+        }
+
+        @include between($sm, $xl) {
+            margin: calc(24px * 0.75) 0 calc(16px * 0.75);
+        }
+
+        @include from($xl) {
+            margin: 24px 0 16px;
+        }
+    }
+
+    &__social {
+        margin: 16px -10px -10px;
+    }
+
+    &__contact-box {
+        margin: 16px 0;
+    }
+
+    &__contact-value {
+        font-weight: bold;
+    }
+
+    &__contact-description {
+        color: #666666;
+    }
+
+}

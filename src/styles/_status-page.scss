@@ -1,0 +1,92 @@
+.status-page {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include to($sm) {
+        padding: 32px 0;
+    }
+
+    @include between($sm, $xl) {
+        padding: 32px 0;
+    }
+
+    @include from($xl) {
+        padding: 40px 0;
+    }
+
+    &__status {
+        
+        @include to($sm) {
+            font-size: 124px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: 98px;
+        }
+        
+        @include from($xl) {
+            font-size: 132px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        
+        @include to($sm) {
+            font-size: 32px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: 26px;
+        }
+        
+        @include from($xl) {
+            font-size: 32px;
+        }
+    }
+
+    &__description {
+        font-size: 14px;
+        max-width: 600px;
+    }
+
+    &__footer {
+
+    }
+
+    &__links-list {
+        list-style: none;
+        padding: 0;
+        margin: 32px 0;
+        font-size: 14px;
+
+        @include from($sm) {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        @include to($sm) {
+            & + & {
+                margin-top: 16px;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $dark;
+        border-bottom: 1px solid $dark;
+
+        &:hover {
+            color: $blue;
+            border-color: $blue;
+        }
+    }
+
+}
