@@ -1,0 +1,200 @@
+.search-dropdown {
+
+    @include to($sm) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    @include between($sm, $xl) {
+        padding-top: calc(30px * 0.75);
+        padding-bottom: calc(30px * 0.75);
+    }
+    
+    @include from($xl) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__close {
+        position: relative;
+        top: 2px;
+        float: right;
+
+        &::before {
+            mask-size: 50% !important;
+        }
+    }
+
+    &__wrapper {
+
+    }
+
+    &__form {
+        position: relative;
+        margin-right: 50px;
+
+        @include from($sm) {
+            display: flex;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 12px;
+            z-index: 2;
+            width: 16px;
+            height: 16px;
+            background: url("../images/icon-search.svg");
+            background-size: 100% 100%;
+            pointer-events: none;
+        }
+    }
+
+    &__input {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        outline: none;
+        border: 1px solid $dark;
+        border-radius: 0;
+        appearance: none;
+        font-family: $base_font;
+        box-sizing: border-box;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 22px;
+        padding-left: 40px;
+        font-size: 14px;
+    }
+
+    &__subtitle {
+        color: #666666;
+
+        @include to($sm) {
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(16px * 0.75);
+            margin-bottom: calc(12px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__menu-row {
+        position: relative;
+        
+        @include from($sm) {
+            display: flex;
+            align-items: flex-start;
+        }
+            
+        @include to($sm) { /////!!!!!
+            margin-top: 40px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(40px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 40px;
+        }
+    }
+
+    &__column {
+        @include to($sm) {
+            &_aside-menu {
+                margin: 0 -20px;
+                padding: 52px 20px 0;
+            }
+
+            &_main-menu {
+                margin: 36px -20px 0;
+                padding: 62px 20px 0;
+                border-top: 1px solid $beige;
+            }
+        }
+
+        @include from($sm) {
+            &_aside-menu {
+                width: 30%;
+            }
+            
+            &_main-menu {
+                width: 60%;
+                padding-left: calc(40px / (1440px - 28px - 28px) * 100%);
+                margin-left: calc(40px / (1440px - 28px - 28px) * 100%);
+                border-left: 1px solid $beige;
+            }
+        }
+    }
+
+    &__menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    
+        @include to($sm) {
+            font-size: 16px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(14px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 14px;
+        }
+    
+        @include from($sm) {
+            &_two-columns {
+                columns: 2;
+            }
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        width: 100%;
+
+        @include to($sm) { /////!!!!!
+            margin-bottom: 12px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-bottom: calc(12px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $dark;
+    }
+
+    &__products-slider {
+        @include to($sm) { /////!!!!!
+            margin-top: 76px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(76px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 76px;
+        }
+    }
+}

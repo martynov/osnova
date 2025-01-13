@@ -60,6 +60,11 @@
         mask-size: 60%;
     }
 
+    &_cross::before {
+        mask-image: url('../images/icon-cross.svg');
+        mask-size: 90%;
+    }
+
     &_profile::before {
         mask-image: url('../images/icon-profile.svg');
         mask-size: 60%;

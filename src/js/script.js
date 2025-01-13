@@ -15,6 +15,7 @@
 //=include './filter-price-range.js'
 //=include './header-dropdowns.js'
 //=include './header-menu-mobiles.js'
+//=include './header-search-dropdown.js'
 //=include './main-banner-slider.js'
 //=include './open-orders-mobile.js'
 //=include './product-card-galleries.js'

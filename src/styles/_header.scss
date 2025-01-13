@@ -169,6 +169,10 @@
         border-top: 1px solid $beige;
         box-shadow: 0 30px 50px -10px rgba($dark, 0.1);
 
+        &_search {
+            top: 0;
+        }
+
         &_visible {
             opacity: 1;
             transform: translateY(0);

@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', function () {
     if (document.querySelector('[data-header-dropdown]') && document.querySelector('[data-header-dropdown]')) {
         document.querySelectorAll('[data-header-dropdown]').forEach(function (el) {
             let attr = el.getAttribute('data-header-dropdown')
-    
+
             if (attr && document.querySelector(`[data-dropdown-name="${ attr }"]`)) {
                 el.addEventListener('click', function () {
                     let currentActive = false
