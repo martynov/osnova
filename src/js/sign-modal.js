@@ -1,31 +1,5 @@
 window.addEventListener('DOMContentLoaded', function () {
-    // show login modal
-    document.querySelectorAll('.js-sign-modal-button').forEach(function (button) {
-        button.addEventListener('click', () => {
-            let modal = document.querySelector('.sign-modal_sign');
-            if (modal) {
-                modal.classList.add('sign-modal_active');
-            }
-        });
-    })
-
-    // show forget password modal
-    document.querySelectorAll('.js-forget-password-modal-button').forEach(function (button) {
-        button.addEventListener('click', () => {
-            let modal = document.querySelector('.sign-modal_forget-password');
-            if (modal) {
-                modal.classList.add('sign-modal_active');
-            }
-        });
-    })
-
-    document.querySelectorAll('.js-sign-modal-close').forEach(function (close) {
-        close.addEventListener('click', (e) => {
-            e.target.closest('.sign-modal_active').classList.remove('sign-modal_active');
-        });
-    })
-
-    // initial state
+    // toggle tabs in login modal
     document.querySelectorAll('.sign-modal_sign').forEach(function (modal) {
         modal.querySelector('.sign-modal__form_sign-in').classList.add('sign-modal__form_visible');
         modal.querySelector('.sign-modal__tab-subtitle_sign-in').classList.add('sign-modal__tab-subtitle_active');
@@ -41,5 +15,4 @@ window.addEventListener('DOMContentLoaded', function () {
             })
         })
     })
-
 });

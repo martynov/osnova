@@ -1,10 +1,28 @@
-<div class="sign-modal sign-modal_sign">
-    <div class="sign-modal__underlay js-sign-modal-close"></div>
+<!--
+
+Справка по назначению атрибутов
+
+Атрибуты кнопки:
+data-modal-trigger - имя модала, который будет вызван по нажатию данной кнопки
+
+Атрибуты модалов:
+data-modal - имя модала
+data-modal-active-class - css-класс, который будет добавлен к этому элементу при открытии модала
+data-modal-hash - атрибут, который будет добавлен в url (работает в обе стороны)
+
+Закрытие модалов:
+data-close-modal - атрибут любых элементов, клик по которым приводит к закрытию модала,
+внутри которого эти элементы находятся. Значение атрибута не учитывается
+
+-->
+
+<div class="sign-modal sign-modal_sign" data-modal="sign-in-modal" data-modal-active-class="sign-modal_active" data-modal-hash="sign-in">
+    <div class="sign-modal__underlay" data-close-modal></div>
     <div class="sign-modal__modal">
         <div class="sign-modal__head-bar">
             <div class="sign-modal__subtitle sign-modal__tab-subtitle sign-modal__tab-subtitle_sign-in">Вход</div>
             <div class="sign-modal__subtitle sign-modal__tab-subtitle sign-modal__tab-subtitle_sign-up">Регистрация</div>
-            <div class="sign-modal__close js-sign-modal-close"></div>
+            <div class="sign-modal__close" data-close-modal></div>
         </div>
         <div class="sign-modal__inner">
             <!-- Форма входа -->
@@ -21,7 +39,7 @@
                 </div>
                 <div class="sign-modal__row">
                     <fieldset class="sign-modal__fieldset">
-                        <input value="Забыли пароль?" class="sign-modal__button button button_transparent button_light js-forget-password-modal-button" />
+                        <input value="Забыли пароль?" class="sign-modal__button button button_transparent button_light" data-modal-trigger="forget-password-modal" />
                     </fieldset>
                 </div>
                 <div class="sign-modal__footer">
@@ -78,12 +96,12 @@
     </div>
 </div>
 
-<div class="sign-modal sign-modal_forget-password">
-    <div class="sign-modal__underlay js-sign-modal-close"></div>
+<div class="sign-modal sign-modal_forget-password" data-modal="forget-password-modal" data-modal-active-class="sign-modal_active" data-modal-hash="forget-password">
+    <div class="sign-modal__underlay" data-close-modal></div>
     <div class="sign-modal__modal">
         <div class="sign-modal__head-bar">
             <div class="sign-modal__subtitle">Восстановление пароля</div>
-            <div class="sign-modal__close js-sign-modal-close"></div>
+            <div class="sign-modal__close" data-close-modal></div>
         </div>
         <div class="sign-modal__inner">
             <!-- Форма входа -->

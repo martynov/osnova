@@ -10,6 +10,7 @@
 //=include './checkout-check-all.js'
 //=include './faq-containers.js'
 //=include './field-masks.js'
+//=include './modals.js'
 //=include './filter-modal.js'
 //=include './filter-price-range.js'
 //=include './header-dropdowns.js'
