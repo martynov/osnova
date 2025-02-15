@@ -1,0 +1,357 @@
+// спизжено отсюда https://original-brands.shop/info/sizes/
+
+.about-page {
+	// весь этот кал работает не абы где, а только внутри .about-page
+
+	// dropdowns
+
+	.filter_dropdown {
+		position: relative;
+	}
+	
+	.filter_dropdown-button,
+	.filter_checkbox-button {
+		padding: 7px 18px;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 26px;
+		letter-spacing: 1px;
+		background: #F5F5F5;
+		border: 1px solid #E0E0E0;
+		border-radius: 4px;
+		color: #0C0C0C;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		position: relative;
+		transition: all .3s ease;
+	}
+	
+	.filter_dropdown-button.checked,
+	.filter_checkbox-button.checked {
+		background-color: #121212;
+		color: white;
+	}
+	
+	.filter_dropdown-button:active,
+	.filter_checkbox-button:active {
+		top: 2px;
+	}
+	
+	.filter_dropdown-button::after {
+		content: "";
+		display: block;
+		width: 16px;
+		height: 16px;
+		background: url('/images/sizes/arrow.svg') no-repeat center/contain transparent;
+		filter: invert(1);
+	  	transform: rotate(90deg);
+		margin-left: 8px;
+		transition: all .3s ease;
+	}
+	
+	.filter_dropdown.active .filter_dropdown-button::after {
+		transform: rotate(-90deg);
+	}
+	
+	.filter_dropdown-button.checked::after {
+		filter: invert(0);
+	}
+	
+	.filter_dropdown-result {
+		display: block;
+		margin-left: .5em;
+		color: #A7A7A7;
+	}
+	
+	.filter_dropdown-list {
+		display: grid;
+		background: white;
+		border: 1px solid #E0E0E0;
+		box-shadow: 0px 4px 8px rgba(142, 141, 208, 0.16);
+		border-radius: 4px;
+		min-width: 305px;
+		width: max-content;
+		padding-top: 8px;
+		position: absolute;
+	  	top: calc(100% + 8px);
+		z-index: 2;
+		opacity: 0;
+		visibility: hidden;
+		transition: all .3s ease;
+		list-style-type: none;
+	}
+	
+	.filter_dropdown.active .filter_dropdown-list {
+		opacity: 1;
+		visibility: visible;
+	}
+	
+	.filter_dropdown-header {
+		padding: 16px;
+	}
+	
+	.filter_dropdown-all {
+		background-color: white;
+		border: 1px solid #E0E0E0;
+		border-radius: 50px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 22px;
+		letter-spacing: 1px;
+		color: #121212;
+		padding: 8px 16px;
+		cursor: pointer;
+		position: relative;
+		top: 0;
+		transition: all .15s ease;
+	}
+	
+	.filter_dropdown-all:active {
+		top: 2px;
+	}
+	
+	.filter_dropdown-list label {
+		display: flex;
+		align-items: center;
+		padding: 12px 16px;
+		cursor: pointer;
+		position: relative;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 26px;
+		letter-spacing: 1px;
+		color: #0C0C0C;
+	}
+	
+	.filter_dropdown-list label:hover {
+		background-color: #F5F5F5;
+	}
+	
+	.filter_dropdown-name {
+		flex: 1;
+		margin-right: 10px;
+		display: flex;
+		align-items: center;
+	}
+	
+	.filter_dropdown-count {
+		color: #A7A7A7;
+	}
+	
+	.filter_dropdown-radio label > *::before {
+		content: "";
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		border: 1px solid #A7A7A7;
+		border-radius: 50%;
+		margin-right: 10px;
+		box-sizing: border-box;
+	}
+	
+	.filter_dropdown-radio label > *::after {
+		content: "";
+		display:  inline-block;
+		width: 10px;
+		height: 10px;
+		background-color: transparent;
+		border-radius: 50%;
+	  position: absolute;
+		box-sizing: border-box;
+		left: 23px;
+		top: 20px;
+	}
+	
+	.filter_dropdown-radio input:checked ~ *::before {
+		border-color: #C83212;
+	}
+	
+	.filter_dropdown-radio input:checked ~ *::after {
+		background-color: #C83212;
+	}
+	
+	.filter_dropdown-checkbox label::before {
+		content: "";
+		display: block;
+		width: 24px;
+		height: 24px;
+		border: 1px solid #A7A7A7;
+		border-radius: 4px;
+		margin-right: 10px;
+		box-sizing: border-box;
+	}
+	
+	.filter_dropdown-checkbox label > *::after {
+		content: "";
+		display: block;
+		width: 24px;
+		height: 24px;
+		border-radius: 4px;
+		margin-right: 10px;
+		background: transparent;
+		box-sizing: border-box;
+		position: absolute;
+		left: 16px;
+		top: 13px;
+	}
+	
+	.filter_dropdown-checkbox input:checked ~ *::after {
+		background: url('/images/sizes/check.svg') no-repeat center/cover;
+	}
+	
+	.filter_dropdown-list label input,
+	.filter_checkbox-button input {
+		display: none;
+	}
+	
+	.filter_dropdown-checkbox label img {
+		display: block;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		margin-right: 10px;
+	}
+	
+	.filter_dropdown-footer {
+		border-top: 1px solid #E0E0E0;
+		padding: 16px;
+		margin-top: 16px;
+	}
+	
+	.filter_dropdown-apply {
+		display: block;
+		width: 100%;
+		background-color: #121212;
+		color: white;
+		padding: 10px;
+		text-align: center;
+		border-radius: 50px;
+		cursor: pointer;
+		position: relative;
+		top: 0px;
+		transition: all .15s ease;
+	}
+	
+	.filter_dropdown-apply:active {
+		top: 2px;
+	}
+	
+	.filter_dropdown-content {
+		padding: 16px;
+		padding-bottom: 0;
+	}
+
+	// sizes
+
+	.info_page-sizes .info_page-sizes_description {
+		list-style: disc;
+		padding-left: 18px;
+		margin-bottom: 48px;
+	}
+	
+	.info_page-sizes_description ::marker {
+		display: none;
+	}
+	
+	.info_page-sizes_selects {
+		display: flex;
+		gap: 8px;
+	}
+	
+	.size_select-list {
+		padding: 0;
+		min-width: auto;
+		width: fit-content;
+	}
+	
+	.size_select-list li {
+		padding: 12px 16px;
+		white-space: nowrap;
+	}
+	
+	.size_select-list li.active {
+		background-color: #C83212;
+		color: white;
+	}
+	
+	.size_select-list li:not(.active) {
+		cursor: pointer;
+	}
+	
+	.size_select-list li:not(.active):hover {
+		background-color: #E0E0E0;
+	}
+	
+	.info_page-sizes_block {
+		margin-top: 48px;
+	}
+	
+	.info_page-sizes_block h2,
+	.info_page-sizes_footer h2 {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 28px;
+		letter-spacing: 0.2px;
+		margin-bottom: 16px;
+	}
+	
+	.info_page-sizes_table {
+		max-width: 100%;
+		overflow: auto;
+	}
+	
+	.info_page-sizes_table table {
+		border: 1px solid #E0E0E0;
+		min-width: 100%;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 22px;
+		letter-spacing: 1px;
+		border-collapse: collapse;
+	}
+	
+	.info_page-sizes_block tr:not(:last-child) {
+		border-bottom: 1px solid #E0E0E0;
+	}
+	
+	.info_page-sizes_block td {
+		padding: 10px 12px;
+		white-space: nowrap;
+		border-left: 1px solid #E0E0E0;
+		text-align: center;
+	}
+	
+	.info_page-sizes_block td:first-child {
+		padding-right: 26px;
+		border: 0;
+		text-align: left;
+	}
+	
+	.info_page-sizes_footer {
+		margin-top: 48px;
+	}
+	
+	.info_page-sizes_footer-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 48px;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 26px;
+		letter-spacing: 0.2px;
+	}
+	
+	.info_page-sizes_footer-container img {
+		display: block;
+		margin-bottom: 24px;
+	}
+	
+	.info_page-sizes_footer-container h3 {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 26px;
+		letter-spacing: 0.2px;
+		margin-top: 24px;
+	}
+}

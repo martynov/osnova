@@ -27,6 +27,7 @@
 //=include './spinbox.js'
 //=include './password-strong-indicator.js'
 //=include './promo-page-grids.js'
+//=include './sizes-page.js'
 
 window.addEventListener('DOMContentLoaded', function () {
     //
