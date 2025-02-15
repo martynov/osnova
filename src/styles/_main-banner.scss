@@ -12,15 +12,11 @@
         position: relative;
 
         @include to($sm) {
-            padding-top: 80vh;
+            padding-top: calc(3 / 2 * 100%);
         }
-        
-        @include between($sm, $xl) {
-            padding-top: calc(420px * 0.75);
-        }
-        
-        @include from($xl) {
-            padding-top: 420px;
+
+        @include from($sm) {
+            padding-top: calc(420 / 720 * 100%);
         }
     }
 
