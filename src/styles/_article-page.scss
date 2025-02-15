@@ -1,0 +1,187 @@
+.article-page {
+    
+    &__header {
+        text-align: center;
+        max-width: 900px;
+        margin: auto;
+
+        @include to($sm) {
+            margin: 0 -20px;
+            border-bottom: 1px solid $beige;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+
+        @include to($sm) {
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(36px * 0.75);
+            margin-bottom: calc(16px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__date {
+        color: #838383;
+
+        @include to($sm) { /////!!!!!
+            font-size: 16px;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(16px * 0.75);
+            margin-top: calc(16px * 0.75);
+            margin-bottom: calc(24px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 16px;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__body {
+        @include to($sm) { /////!!!!!
+            margin-top: 40px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(40px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 40px;
+        }
+    }
+
+    &__content {
+        max-width: 1030px;
+        margin: auto;
+    }
+
+    &__footer {
+        max-width: 1030px;
+        margin: auto;
+
+        @include to($sm) { /////!!!!!
+            margin-top: 40px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(40px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 40px;
+        }
+    }
+
+    &__meta-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include to($sm) { /////!!!!!
+            margin-top: 40px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(40px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 40px;
+        }
+    }
+
+    &__meta-col {
+        &_share {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &_views {
+
+        }
+    }
+
+    &__share {
+
+    }
+
+    &__views {
+        color: #838383;
+
+        @include to($sm) { /////!!!!!
+            font-size: 16px;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+        
+        @include between($sm, $xl) {
+            font-size: calc(16px * 0.75);
+            margin-top: calc(16px * 0.75);
+            margin-bottom: calc(24px * 0.75);
+        }
+        
+        @include from($xl) {
+            font-size: 16px;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__buttons-row {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+
+        @include to($sm) { /////!!!!!
+            margin-top: 40px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(40px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 40px;
+        }
+    }
+
+    &__button {
+        
+    }
+
+    &__similar-products {
+        max-width: 1030px;
+        margin: auto;
+
+        @include to($sm) { /////!!!!!
+            margin-top: 72px;
+        }
+        
+        @include between($sm, $xl) {
+            margin-top: calc(72px * 0.75);
+        }
+        
+        @include from($xl) {
+            margin-top: 72px;
+        }
+    }
+
+}
