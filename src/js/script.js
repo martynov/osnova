@@ -2,6 +2,7 @@
 //=include '../../node_modules/jquery-ui/dist/jquery-ui.min.js'
 //=include '../../node_modules/swiper/swiper-bundle.min.js'
 //=include '../../node_modules/inputmask/dist/inputmask.min.js'
+//=include '../../node_modules/masonry-layout/dist/masonry.pkgd.min.js'
 
 
 //=include './window-template.js'
@@ -25,6 +26,7 @@
 //=include './products-slider.js'
 //=include './spinbox.js'
 //=include './password-strong-indicator.js'
+//=include './promo-page-grids.js'
 
 window.addEventListener('DOMContentLoaded', function () {
     //

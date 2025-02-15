@@ -47,7 +47,6 @@
 @import 'home-lookbook-widget';
 @import 'home-blog-widget';
 @import 'home-promo-row';
-@import 'home-sale-banner';
 @import 'home-discount-banner';
 
 // catalog page
@@ -128,6 +127,11 @@
 //
 @import 'status-page';
 @import 'under-construction';
+
+// promo page
+@import 'promo-page';
+@import 'promo-page-grid';
+@import 'promo-banner';
 
 // other elements
 @import 'title';
