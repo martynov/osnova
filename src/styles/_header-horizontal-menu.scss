@@ -22,6 +22,24 @@
         padding: 0;
         margin: 0;
 
+        @include from($sm) {
+            &_active {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 100%;
+                    margin-top: 5px;
+                    height: 8px;
+                    background-image: url(/images/menu-active-line.jpg);
+                }
+            }
+        }
+
         & + & {
             @include to($sm) { /////!!!!!
                 margin-left: 55px;
